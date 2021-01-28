@@ -28,7 +28,7 @@
                                 <rect key="frame" x="343" y="790" width="21" height="22"/>
                                 <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="aOC-qF-9qB" kind="presentation" id="dot-8d-cdO"/>
+                                    <segue destination="aOC-qF-9qB" kind="presentation" modalPresentationStyle="fullScreen" id="dot-8d-cdO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,7 +144,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tfb-bT-2YH"/>
+        <segue reference="dot-8d-cdO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
