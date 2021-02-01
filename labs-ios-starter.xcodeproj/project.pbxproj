@@ -26,6 +26,8 @@
 		C3BEDE9325C2731D006BF31A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9225C2731D006BF31A /* SearchViewController.swift */; };
 		C3BEDE9625C27331006BF31A /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9525C27331006BF31A /* MapScreenViewController.swift */; };
 		C3BEDE9925C2733B006BF31A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */; };
+		F35C107C25C78949000AA795 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35C107B25C78949000AA795 /* Colors.xcassets */; };
+		F35C107F25C791E0000AA795 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C107E25C791E0000AA795 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		C3BEDE9225C2731D006BF31A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3BEDE9525C27331006BF31A /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
 		C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F35C107B25C78949000AA795 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F35C107E25C791E0000AA795 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				466C427C249A8749007D033E /* Assets.xcassets */,
 				466C4281249A8749007D033E /* Info.plist */,
 				466C4287249A889F007D033E /* File Organization.md */,
+				F35C107B25C78949000AA795 /* Colors.xcassets */,
 			);
 			path = "labs-ios-starter";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			children = (
 				C3BEDE8925C27271006BF31A /* Search.storyboard */,
 				C3BEDE9225C2731D006BF31A /* SearchViewController.swift */,
+				F35C107E25C791E0000AA795 /* CardView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				466C427D249A8749007D033E /* Assets.xcassets in Resources */,
 				C3BEDE8A25C27271006BF31A /* Search.storyboard in Resources */,
 				466C427B249A8748007D033E /* Main.storyboard in Resources */,
+				F35C107C25C78949000AA795 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +265,7 @@
 				46BEB4E724C98D8900FE0CD1 /* Notifications.swift in Sources */,
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
+				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
 				46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */,
 				46BEB4E524C98CDC00FE0CD1 /* LoginViewController.swift in Sources */,
