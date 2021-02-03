@@ -68,7 +68,7 @@ dolor sit amet</string>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="rfe-oE-2Ib"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touristMap" translatesAutoresizingMaskIntoConstraints="NO" id="XIi-pr-dlF">
                                 <rect key="frame" x="0.0" y="590" width="414" height="306"/>
