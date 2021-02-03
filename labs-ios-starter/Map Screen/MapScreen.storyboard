@@ -26,16 +26,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
+                                <rect key="frame" x="358" y="512" width="36" height="34"/>
+                                <state key="normal" image="favoriteButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aOY-yt-gpM" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="0Rm-v1-2sx"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="height" secondItem="BAD-gb-ue6" secondAttribute="height" multiplier="0.5" id="238-BG-DQq"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="lIR-xt-PQx" secondAttribute="trailing" id="LXQ-e1-dEW"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="top" secondItem="pwS-ca-Cct" secondAttribute="top" id="MOS-yp-I5g"/>
                             <constraint firstItem="bX5-C6-Cgw" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="SMR-PX-38a"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" id="Z9Y-sU-sRP"/>
                             <constraint firstItem="bX5-C6-Cgw" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="ahV-WJ-p4o"/>
+                            <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="aOY-yt-gpM" secondAttribute="trailing" constant="20" id="e80-rK-01r"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,6 +51,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favoriteButton" width="35.5" height="33.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
