@@ -16,8 +16,19 @@
                     <view key="view" contentMode="scaleToFill" id="BAD-gb-ue6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lIR-xt-PQx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lIR-xt-PQx" firstAttribute="height" secondItem="BAD-gb-ue6" secondAttribute="height" multiplier="0.5" id="238-BG-DQq"/>
+                            <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="lIR-xt-PQx" secondAttribute="trailing" id="LXQ-e1-dEW"/>
+                            <constraint firstItem="lIR-xt-PQx" firstAttribute="top" secondItem="pwS-ca-Cct" secondAttribute="top" id="MOS-yp-I5g"/>
+                            <constraint firstItem="lIR-xt-PQx" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" id="Z9Y-sU-sRP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-Ja-brA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
