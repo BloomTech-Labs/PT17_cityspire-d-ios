@@ -20,6 +20,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lIR-xt-PQx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="448"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-C6-Cgw">
+                                <rect key="frame" x="20" y="512" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -27,7 +33,9 @@
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="height" secondItem="BAD-gb-ue6" secondAttribute="height" multiplier="0.5" id="238-BG-DQq"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="lIR-xt-PQx" secondAttribute="trailing" id="LXQ-e1-dEW"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="top" secondItem="pwS-ca-Cct" secondAttribute="top" id="MOS-yp-I5g"/>
+                            <constraint firstItem="bX5-C6-Cgw" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="SMR-PX-38a"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" id="Z9Y-sU-sRP"/>
+                            <constraint firstItem="bX5-C6-Cgw" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="ahV-WJ-p4o"/>
                         </constraints>
                     </view>
                 </viewController>
