@@ -21,6 +21,8 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var rentalPriceLabel: UILabel!
     @IBOutlet var walkabilityLabel: UILabel!
     @IBOutlet var averageIncomeLabel: UILabel!
+    
+    override var prefersStatusBarHidden: Bool { return true }
 
     override func viewDidLoad() {
         super.viewDidLoad()
