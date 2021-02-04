@@ -177,12 +177,25 @@
                                     <constraint firstAttribute="height" constant="92" id="Z53-UX-VUj"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heQ-gD-q59">
+                                <rect key="frame" x="155" y="603" width="104" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="1iE-ac-L7m"/>
+                                    <constraint firstAttribute="height" constant="92" id="z08-xA-Qxw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="walkabilityPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="tJh-1Y-pMR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xm0-es-E6n">
                                 <rect key="frame" x="20" y="603" width="104" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="3Kj-5i-kjF"/>
                                     <constraint firstAttribute="width" constant="104" id="v0x-SH-cXS"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="employmentPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="CfV-9k-uQY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjl-hu-3Xi">
                                 <rect key="frame" x="20" y="730" width="104" height="92"/>
@@ -190,6 +203,9 @@
                                     <constraint firstAttribute="width" constant="104" id="53e-EQ-eWq"/>
                                     <constraint firstAttribute="height" constant="92" id="mEe-nB-C7x"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="averageAgePressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="mVk-uG-3D4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-uw-wSG">
                                 <rect key="frame" x="155" y="730" width="104" height="92"/>
@@ -197,6 +213,9 @@
                                     <constraint firstAttribute="width" constant="104" id="Zif-QN-bPR"/>
                                     <constraint firstAttribute="height" constant="92" id="skt-oM-l7j"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="livabilityPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="Bm3-Ty-Xuw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-ma-gZx">
                                 <rect key="frame" x="290" y="730" width="104" height="92"/>
@@ -204,6 +223,9 @@
                                     <constraint firstAttribute="width" constant="104" id="ELx-Kb-l0v"/>
                                     <constraint firstAttribute="height" constant="92" id="RiH-X3-Wao"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="rentalPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="85g-Dg-38a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfv-RV-vOn">
                                 <rect key="frame" x="290" y="603" width="104" height="92"/>
@@ -211,13 +233,9 @@
                                     <constraint firstAttribute="height" constant="92" id="QGd-Cc-7pY"/>
                                     <constraint firstAttribute="width" constant="104" id="mzZ-Pe-ZnW"/>
                                 </constraints>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heQ-gD-q59">
-                                <rect key="frame" x="155" y="603" width="104" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="1iE-ac-L7m"/>
-                                    <constraint firstAttribute="height" constant="92" id="z08-xA-Qxw"/>
-                                </constraints>
+                                <connections>
+                                    <action selector="averageIncome:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="1G3-ga-NfD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
@@ -258,6 +276,17 @@
                             <constraint firstItem="BpU-bd-Nff" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="x4V-aE-iss"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageAgeLabel" destination="ihY-EL-lXB" id="5uA-lo-fcR"/>
+                        <outlet property="averageIncome" destination="Rqj-rJ-2vT" id="B1m-Eb-lar"/>
+                        <outlet property="cityLabel" destination="bX5-C6-Cgw" id="sOT-dW-zs1"/>
+                        <outlet property="employmentLabel" destination="Z3I-O0-Jve" id="XzQ-hD-Tr9"/>
+                        <outlet property="favoriteButton" destination="aOY-yt-gpM" id="P1o-og-iTK"/>
+                        <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="s3o-lV-jQ3"/>
+                        <outlet property="mapView" destination="lIR-xt-PQx" id="pGD-oi-sEr"/>
+                        <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
+                        <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-Ja-brA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

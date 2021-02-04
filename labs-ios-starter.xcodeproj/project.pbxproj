@@ -20,11 +20,11 @@
 		46BEB4EE24C98ECC00FE0CD1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEB4ED24C98ECC00FE0CD1 /* ProfileController.swift */; };
 		46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */; };
 		46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */; };
+		C3A726BC25CBAE1F009B2FBE /* MapScreenViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A726BB25CBAE1F009B2FBE /* MapScreenViewControllerViewController.swift */; };
 		C3BEDE8A25C27271006BF31A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8925C27271006BF31A /* Search.storyboard */; };
 		C3BEDE8D25C2728D006BF31A /* MapScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */; };
 		C3BEDE9025C272A0006BF31A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */; };
 		C3BEDE9325C2731D006BF31A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9225C2731D006BF31A /* SearchViewController.swift */; };
-		C3BEDE9625C27331006BF31A /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9525C27331006BF31A /* MapScreenViewController.swift */; };
 		C3BEDE9925C2733B006BF31A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */; };
 		F35C107C25C78949000AA795 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35C107B25C78949000AA795 /* Colors.xcassets */; };
 		F35C107F25C791E0000AA795 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C107E25C791E0000AA795 /* CardView.swift */; };
@@ -47,11 +47,11 @@
 		46BEB4ED24C98ECC00FE0CD1 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SimpleAlert.swift"; sourceTree = "<group>"; };
 		46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
+		C3A726BB25CBAE1F009B2FBE /* MapScreenViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewControllerViewController.swift; sourceTree = "<group>"; };
 		C3BEDE8925C27271006BF31A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapScreen.storyboard; sourceTree = "<group>"; };
 		C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		C3BEDE9225C2731D006BF31A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		C3BEDE9525C27331006BF31A /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
 		C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F35C107B25C78949000AA795 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F35C107E25C791E0000AA795 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */,
-				C3BEDE9525C27331006BF31A /* MapScreenViewController.swift */,
+				C3A726BB25CBAE1F009B2FBE /* MapScreenViewControllerViewController.swift */,
 			);
 			path = "Map Screen";
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 				C3BEDE9325C2731D006BF31A /* SearchViewController.swift in Sources */,
 				46BEB4EE24C98ECC00FE0CD1 /* ProfileController.swift in Sources */,
 				46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */,
-				C3BEDE9625C27331006BF31A /* MapScreenViewController.swift in Sources */,
 				46BEB4E724C98D8900FE0CD1 /* Notifications.swift in Sources */,
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,
+				C3A726BC25CBAE1F009B2FBE /* MapScreenViewControllerViewController.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
 				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
