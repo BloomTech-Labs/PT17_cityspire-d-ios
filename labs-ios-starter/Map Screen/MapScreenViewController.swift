@@ -57,4 +57,33 @@ class MapScreenViewController: UIViewController {
         
     }
     
+    func animateIn(desiredView: UIView, mid: Bool) {
+        let backgroundView = self.view!
+        backgroundView.addSubview(desiredView)
+        
+        if mid == false{
+            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            desiredView.alpha = 0
+            desiredView.center = CGPoint(x: backgroundView.center.x, y: backgroundView.center.y - 100)
+        } else {
+            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            desiredView.alpha = 0
+            desiredView.center = backgroundView.center
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            desiredView.alpha = 1
+        }
+    }
+    
+    func animateOut(desiredView: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            desiredView.alpha = 0
+        }, completion: { _ in
+            desiredView.removeFromSuperview()
+        })
+    }
+    
 }
