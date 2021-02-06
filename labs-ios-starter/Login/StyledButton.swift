@@ -15,7 +15,7 @@ class StyledButton: UIButton {
         layer.shadowPath = CGPath(rect: layer.bounds, transform:  nil)
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 1, height: 1)
-        layer.shadowOpacity = 0.2
+        layer.shadowOpacity = 0.1
         layer.shadowRadius = 10
         
         layer.cornerRadius = 10
