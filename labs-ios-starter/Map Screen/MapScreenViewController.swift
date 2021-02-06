@@ -10,7 +10,10 @@ import UIKit
 import MapKit
 
 class MapScreenViewController: UIViewController {
-
+    
+    @IBOutlet var blurView: UIVisualEffect!
+    @IBOutlet var popUpView: UIView!
+    
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var favoriteButton: UIButton!
     

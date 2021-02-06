@@ -280,11 +280,13 @@
                     <connections>
                         <outlet property="averageAgeLabel" destination="ihY-EL-lXB" id="5uA-lo-fcR"/>
                         <outlet property="averageIncomeLabel" destination="Rqj-rJ-2vT" id="n9h-C5-efb"/>
+                        <outlet property="blurView" destination="XFs-6j-xbd" id="S9O-Zz-fi4"/>
                         <outlet property="cityLabel" destination="bX5-C6-Cgw" id="sOT-dW-zs1"/>
                         <outlet property="employmentLabel" destination="Z3I-O0-Jve" id="XzQ-hD-Tr9"/>
                         <outlet property="favoriteButton" destination="aOY-yt-gpM" id="P1o-og-iTK"/>
                         <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="s3o-lV-jQ3"/>
                         <outlet property="mapView" destination="lIR-xt-PQx" id="pGD-oi-sEr"/>
+                        <outlet property="popUpView" destination="YWh-bY-hc2" id="0UN-33-2lH"/>
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
                     </connections>
