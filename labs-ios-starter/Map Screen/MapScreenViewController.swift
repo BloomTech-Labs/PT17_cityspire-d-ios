@@ -34,27 +34,34 @@ class MapScreenViewController: UIViewController {
     }
     
     @IBAction func employmentPressed(_ sender: Any) {
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
         
     }
     
     @IBAction func walkabilityPressed(_ sender: Any) {
-        
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
     }
     
     @IBAction func averageAgePressed(_ sender: Any) {
-        
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
     }
     
     @IBAction func livabilityPressed(_ sender: Any) {
-        
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
     }
     
     @IBAction func rentalPressed(_ sender: Any) {
-        
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
     }
     
     @IBAction func averageIncome(_ sender: Any) {
-        
+        animateIn(desiredView: blurView, mid: true)
+        animateIn(desiredView: popUpView, mid: true)
     }
     
     func animateIn(desiredView: UIView, mid: Bool) {
