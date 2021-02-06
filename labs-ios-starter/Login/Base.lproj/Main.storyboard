@@ -25,10 +25,16 @@
                                     <segue destination="aOC-qF-9qB" kind="presentation" modalPresentationStyle="fullScreen" id="dot-8d-cdO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-Xf-had" customClass="StyledButton" customModule="labs_ios_starter" customModuleProvider="target">
-                                <rect key="frame" x="137" y="536" width="140" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-Oc-Cfw">
+                                <rect key="frame" x="0.0" y="-5" width="417" height="605"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-Xf-had" customClass="StyledButton" customModule="labs_ios_starter" customModuleProvider="target">
+                                <rect key="frame" x="137" y="613" width="140" height="46"/>
                                 <color key="backgroundColor" name="LightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="3fw-FJ-fCN"/>
+                                    <constraint firstAttribute="width" constant="140" id="Kte-k8-DRJ"/>
+                                </constraints>
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -40,8 +46,13 @@
                         <viewLayoutGuide key="safeArea" id="R8l-LV-vJe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CQk-Xf-had" firstAttribute="centerX" secondItem="INU-fS-Snd" secondAttribute="centerX" id="MBI-zP-DgD"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="bottom" secondItem="mXo-da-Z8S" secondAttribute="bottom" constant="50" id="Wc3-VK-D5X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cY4-Oc-Cfw" secondAttribute="trailing" constant="-23" id="ZsH-0Y-ml3"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="trailing" secondItem="mXo-da-Z8S" secondAttribute="trailing" constant="50" id="eWr-Fb-o2F"/>
+                            <constraint firstItem="cY4-Oc-Cfw" firstAttribute="leading" secondItem="INU-fS-Snd" secondAttribute="leading" id="hd3-KG-tlz"/>
+                            <constraint firstItem="CQk-Xf-had" firstAttribute="top" secondItem="cY4-Oc-Cfw" secondAttribute="bottom" constant="13" id="zCL-Mq-jUm"/>
+                            <constraint firstItem="cY4-Oc-Cfw" firstAttribute="top" secondItem="INU-fS-Snd" secondAttribute="topMargin" constant="-49" id="zzE-8j-bym"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ProfileViewer" id="fm5-ES-PwH"/>
@@ -150,6 +161,7 @@
         <segue reference="dot-8d-cdO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Map" width="374.5" height="605"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <namedColor name="LightBlue">
             <color red="0.043000001460313797" green="0.47499999403953552" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
