@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Class that will style UIButtons used in the app
 class StyledButton: UIButton {
     
     override func awakeFromNib() {
