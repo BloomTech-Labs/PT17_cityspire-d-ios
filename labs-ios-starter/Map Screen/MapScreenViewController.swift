@@ -11,7 +11,7 @@ import MapKit
 
 class MapScreenViewController: UIViewController {
     
-    @IBOutlet var blurView: UIVisualEffect!
+    @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
     
     @IBOutlet var mapView: MKMapView!
@@ -29,6 +29,7 @@ class MapScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
 
     }
     
