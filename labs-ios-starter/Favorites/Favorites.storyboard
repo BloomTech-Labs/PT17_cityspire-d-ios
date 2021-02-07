@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OGm-WF-5ID">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OGm-WF-5ID" customClass="FavoritesCollectionViewCell" customModule="labs_ios_starter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bSG-nU-HTw">
@@ -100,6 +100,14 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="232"/>
+                                        <connections>
+                                            <outlet property="avgIncomeLabel" destination="ovC-US-7l1" id="DCD-2i-Jz3"/>
+                                            <outlet property="cityTitleLabel" destination="4jT-R8-b6T" id="67t-29-IdL"/>
+                                            <outlet property="favoriteButton" destination="6hj-Vw-4aT" id="G7p-tp-Bs3"/>
+                                            <outlet property="livabiltyLabel" destination="OzT-zp-rkE" id="4tM-Zz-i9H"/>
+                                            <outlet property="mapView" destination="OIu-JD-zjZ" id="ee3-DG-5c8"/>
+                                            <outlet property="walkabilityLabel" destination="SyV-p6-sPa" id="g49-7h-9QP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
