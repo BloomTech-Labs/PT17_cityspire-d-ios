@@ -18,6 +18,8 @@ class SearchViewController: UIViewController {
         setGradientBackgroundColor()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func unwindToSearch(segue:UIStoryboardSegue){}
  
     // MARK: - Background gradient
     

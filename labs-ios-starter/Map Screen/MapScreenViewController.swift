@@ -34,6 +34,12 @@ class MapScreenViewController: UIViewController {
         popUpView.layer.cornerRadius = 5.0
 
     }
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        
+    }
+    @IBAction func toFavoritesButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toFavoritesPage", sender: self)
+    }
     
     @IBAction func employmentPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)

@@ -241,10 +241,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-ok-rPe">
                                 <rect key="frame" x="20" y="64" width="40" height="37.5"/>
                                 <state key="normal" image="searchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="vFm-H9-xUA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-SW-HDW">
                                 <rect key="frame" x="20" y="121.5" width="35.5" height="33.5"/>
                                 <state key="normal" image="favoriteButton"/>
+                                <connections>
+                                    <action selector="toFavoritesButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="hEI-mS-kFE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
@@ -301,6 +307,7 @@
                         <outlet property="popUpView" destination="YWh-bY-hc2" id="0UN-33-2lH"/>
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
+                        <segue destination="1h2-2M-OET" kind="presentation" identifier="toFavoritesPage" id="jaw-Zt-I3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-Ja-brA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,6 +342,14 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="376.81159420289856" y="180.80357142857142"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="DR3-BO-sxL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" id="1h2-2M-OET" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8s-WU-fhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="181"/>
         </scene>
     </scenes>
     <resources>
