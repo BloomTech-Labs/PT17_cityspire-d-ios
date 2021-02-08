@@ -42,15 +42,24 @@
                                     <action selector="signIn:" destination="4a7-cC-Xlp" eventType="touchUpInside" id="qez-xn-3z4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rE-Kz-bu3">
+                                <rect key="frame" x="343" y="832" width="51" height="30"/>
+                                <state key="normal" title="To Map"/>
+                                <connections>
+                                    <segue destination="dcE-4f-NcJ" kind="presentation" modalPresentationStyle="fullScreen" id="aAr-qi-g6M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R8l-LV-vJe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CQk-Xf-had" firstAttribute="centerX" secondItem="INU-fS-Snd" secondAttribute="centerX" id="MBI-zP-DgD"/>
+                            <constraint firstItem="R8l-LV-vJe" firstAttribute="trailing" secondItem="1rE-Kz-bu3" secondAttribute="trailing" constant="20" id="RNt-tz-aKz"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="bottom" secondItem="mXo-da-Z8S" secondAttribute="bottom" constant="50" id="Wc3-VK-D5X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cY4-Oc-Cfw" secondAttribute="trailing" constant="-23" id="ZsH-0Y-ml3"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="trailing" secondItem="mXo-da-Z8S" secondAttribute="trailing" constant="50" id="eWr-Fb-o2F"/>
                             <constraint firstItem="cY4-Oc-Cfw" firstAttribute="leading" secondItem="INU-fS-Snd" secondAttribute="leading" id="hd3-KG-tlz"/>
+                            <constraint firstItem="1rE-Kz-bu3" firstAttribute="bottom" secondItem="R8l-LV-vJe" secondAttribute="bottom" id="jrM-mS-IVc"/>
                             <constraint firstItem="CQk-Xf-had" firstAttribute="top" secondItem="cY4-Oc-Cfw" secondAttribute="bottom" constant="13" id="zCL-Mq-jUm"/>
                             <constraint firstItem="cY4-Oc-Cfw" firstAttribute="top" secondItem="INU-fS-Snd" secondAttribute="topMargin" constant="-49" id="zzE-8j-bym"/>
                         </constraints>
@@ -74,6 +83,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XU-Dw-F8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2231" y="84"/>
+        </scene>
+        <!--MapScreen-->
+        <scene sceneID="i7S-yD-IgK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapScreen" id="dcE-4f-NcJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfd-Ue-yNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="325"/>
         </scene>
         <!--Add Profile View Controller-->
         <scene sceneID="Rcb-Kk-CcR">
