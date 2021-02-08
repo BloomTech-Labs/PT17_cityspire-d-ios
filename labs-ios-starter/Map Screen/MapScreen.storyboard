@@ -308,6 +308,7 @@
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
                         <segue destination="1h2-2M-OET" kind="presentation" identifier="toFavoritesPage" id="jaw-Zt-I3d"/>
+                        <segue destination="VlK-ee-2GT" kind="presentation" identifier="unwindToSearch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="TYc-z5-gAZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-Ja-brA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -349,7 +350,15 @@
                 <viewControllerPlaceholder storyboardName="Favorites" id="1h2-2M-OET" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8s-WU-fhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="181"/>
+            <point key="canvasLocation" x="968" y="176"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="7yy-nP-CQS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="VlK-ee-2GT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iM8-wD-8Zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="255"/>
         </scene>
     </scenes>
     <resources>
