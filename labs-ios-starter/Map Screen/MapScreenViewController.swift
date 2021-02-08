@@ -25,6 +25,9 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var walkabilityLabel: UILabel!
     @IBOutlet var averageIncomeLabel: UILabel!
     
+    @IBOutlet var popUpTitleLabel: UILabel!
+    @IBOutlet var popUpTextView: UITextView!
+    
     override var prefersStatusBarHidden: Bool { return true }
 
     override func viewDidLoad() {

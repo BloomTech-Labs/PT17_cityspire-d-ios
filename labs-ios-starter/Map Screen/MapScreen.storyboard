@@ -311,6 +311,8 @@
                         <outlet property="favoriteButton" destination="aOY-yt-gpM" id="P1o-og-iTK"/>
                         <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="s3o-lV-jQ3"/>
                         <outlet property="mapView" destination="lIR-xt-PQx" id="pGD-oi-sEr"/>
+                        <outlet property="popUpTextView" destination="KvL-Ud-59S" id="Ghl-Oh-1Ux"/>
+                        <outlet property="popUpTitleLabel" destination="ATH-sR-0TL" id="8uc-Kc-VuB"/>
                         <outlet property="popUpView" destination="YWh-bY-hc2" id="0UN-33-2lH"/>
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
