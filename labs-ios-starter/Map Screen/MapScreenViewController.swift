@@ -15,8 +15,8 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var popUpView: UIView!
     
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var favoriteButton: UIButton!
     
+    @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var employmentLabel: UILabel!
     @IBOutlet var averageAgeLabel: UILabel!
@@ -40,11 +40,12 @@ class MapScreenViewController: UIViewController {
     @IBAction func toFavoritesButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "toFavoritesPage", sender: self)
     }
+    @IBAction func favoriteCityPressed(_ sender: Any) {
+    }
     
     @IBAction func employmentPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
-        
     }
     
     @IBAction func walkabilityPressed(_ sender: Any) {

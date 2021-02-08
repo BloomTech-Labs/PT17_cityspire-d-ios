@@ -33,6 +33,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
                                         <rect key="frame" x="336.5" y="0.0" width="37.5" height="41"/>
                                         <state key="normal" image="uncheckedHeart"/>
+                                        <state key="selected" image="favoriteButton"/>
+                                        <connections>
+                                            <action selector="favoriteCityPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="l5C-Pb-exr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -325,7 +329,7 @@
                     <blurEffect style="regular"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" id="YWh-bY-hc2">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="386"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lY6-oD-pGL">
@@ -336,12 +340,32 @@
                                 <action selector="cancelPopUpView:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="5T2-4T-qKV"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATH-sR-0TL">
+                            <rect key="frame" x="20" y="20" width="66.5" height="33.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KvL-Ud-59S">
+                            <rect key="frame" x="20" y="73.5" width="200" height="292.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="gJf-ML-sJR"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="gJf-ML-sJR" firstAttribute="trailing" secondItem="lY6-oD-pGL" secondAttribute="trailing" constant="5" id="E3g-3S-sKg"/>
+                        <constraint firstItem="KvL-Ud-59S" firstAttribute="leading" secondItem="gJf-ML-sJR" secondAttribute="leading" constant="20" id="JKA-gT-ici"/>
                         <constraint firstItem="lY6-oD-pGL" firstAttribute="top" secondItem="YWh-bY-hc2" secondAttribute="top" constant="5" id="JZX-Tz-WmW"/>
+                        <constraint firstItem="ATH-sR-0TL" firstAttribute="top" secondItem="YWh-bY-hc2" secondAttribute="top" constant="20" id="XBI-Nj-MOV"/>
+                        <constraint firstItem="gJf-ML-sJR" firstAttribute="bottom" secondItem="KvL-Ud-59S" secondAttribute="bottom" constant="20" id="XSw-Dv-dGL"/>
+                        <constraint firstItem="ATH-sR-0TL" firstAttribute="leading" secondItem="YWh-bY-hc2" secondAttribute="leading" constant="20" id="YHc-7T-4ME"/>
+                        <constraint firstItem="gJf-ML-sJR" firstAttribute="trailing" secondItem="KvL-Ud-59S" secondAttribute="trailing" constant="20" id="Yna-VZ-UGq"/>
+                        <constraint firstItem="KvL-Ud-59S" firstAttribute="top" secondItem="ATH-sR-0TL" secondAttribute="bottom" constant="20" id="aRI-FF-j0V"/>
                     </constraints>
                 </view>
             </objects>
@@ -381,6 +405,9 @@
         <namedColor name="DarkBlue">
             <color red="0.063000001013278961" green="0.27099999785423279" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
