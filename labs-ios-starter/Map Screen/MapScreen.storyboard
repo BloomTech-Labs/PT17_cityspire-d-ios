@@ -254,13 +254,6 @@
                                     <action selector="searchButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="vFm-H9-xUA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-SW-HDW">
-                                <rect key="frame" x="20" y="121.5" width="35.5" height="33.5"/>
-                                <state key="normal" image="favoriteButton"/>
-                                <connections>
-                                    <action selector="toFavoritesButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="hEI-mS-kFE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -268,7 +261,6 @@
                             <constraint firstItem="iDg-uw-wSG" firstAttribute="top" secondItem="BpU-bd-Nff" secondAttribute="bottom" constant="35" id="1oW-Ge-PMV"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="height" secondItem="BAD-gb-ue6" secondAttribute="height" multiplier="0.5" id="238-BG-DQq"/>
                             <constraint firstItem="KTc-S8-uHI" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="4lp-vQ-ceN"/>
-                            <constraint firstItem="Qxm-SW-HDW" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="5MQ-Lx-NG5"/>
                             <constraint firstItem="BpU-bd-Nff" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="6I3-sF-MyZ"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="oI7-ma-gZx" secondAttribute="trailing" constant="20" id="7KG-nv-u0d"/>
                             <constraint firstItem="xm0-es-E6n" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="8Bj-m7-9pZ"/>
@@ -295,7 +287,6 @@
                             <constraint firstItem="heQ-gD-q59" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="cCv-rX-fSk"/>
                             <constraint firstItem="AtU-4D-s07" firstAttribute="top" secondItem="yyn-0d-TOg" secondAttribute="bottom" constant="35" id="cYH-d4-Uo8"/>
                             <constraint firstItem="79r-Kz-UvU" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="gw6-sz-q1W"/>
-                            <constraint firstItem="Qxm-SW-HDW" firstAttribute="top" secondItem="SpI-ok-rPe" secondAttribute="bottom" constant="20" id="jew-go-CEv"/>
                             <constraint firstItem="unh-oa-DuP" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="jxx-eG-dHG"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="yyn-0d-TOg" secondAttribute="trailing" constant="20" id="kzL-W7-8sJ"/>
                             <constraint firstItem="oI7-ma-gZx" firstAttribute="top" secondItem="yyn-0d-TOg" secondAttribute="bottom" constant="35" id="uTK-bu-qnf"/>
@@ -316,7 +307,6 @@
                         <outlet property="popUpView" destination="YWh-bY-hc2" id="0UN-33-2lH"/>
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
-                        <segue destination="1h2-2M-OET" kind="presentation" identifier="toFavoritesPage" id="jaw-Zt-I3d"/>
                         <segue destination="VlK-ee-2GT" kind="presentation" identifier="unwindToSearch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="TYc-z5-gAZ"/>
                     </connections>
                 </viewController>
@@ -373,21 +363,13 @@
             </objects>
             <point key="canvasLocation" x="376.81159420289856" y="180.80357142857142"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="DR3-BO-sxL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Favorites" id="1h2-2M-OET" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b8s-WU-fhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="968" y="176"/>
-        </scene>
         <!--Search-->
         <scene sceneID="7yy-nP-CQS">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" id="VlK-ee-2GT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM8-wD-8Zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="255"/>
+            <point key="canvasLocation" x="956" y="181"/>
         </scene>
     </scenes>
     <resources>

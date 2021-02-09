@@ -16,6 +16,9 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func backNavigationButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToSearch", sender: self)
+    }
 }
 
 extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

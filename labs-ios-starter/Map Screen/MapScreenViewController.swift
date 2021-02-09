@@ -40,9 +40,6 @@ class MapScreenViewController: UIViewController {
     @IBAction func searchButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }
-    @IBAction func toFavoritesButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toFavoritesPage", sender: self)
-    }
     @IBAction func favoriteCityPressed(_ sender: Any) {
     }
     
