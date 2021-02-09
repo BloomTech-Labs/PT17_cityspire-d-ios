@@ -18,22 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
-                                <rect key="frame" x="358.5" y="468" width="35.5" height="33.5"/>
-                                <state key="normal" image="favoriteButton"/>
-                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lIR-xt-PQx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-C6-Cgw">
-                                <rect key="frame" x="20" y="468" width="331" height="41"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTc-S8-uHI">
+                                <rect key="frame" x="20" y="468" width="374" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-C6-Cgw">
+                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" name="DarkBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
+                                        <rect key="frame" x="336.5" y="0.0" width="37.5" height="41"/>
+                                        <state key="normal" image="uncheckedHeart"/>
+                                        <state key="selected" image="favoriteButton"/>
+                                        <connections>
+                                            <action selector="favoriteCityPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="l5C-Pb-exr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="331" id="Xph-yd-xBH"/>
+                                    <constraint firstItem="bX5-C6-Cgw" firstAttribute="width" secondItem="KTc-S8-uHI" secondAttribute="width" multiplier="0.9" id="hiw-dP-ere"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" name="DarkBlue"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="unh-oa-DuP">
                                 <rect key="frame" x="20" y="559" width="104" height="92"/>
                                 <subviews>
@@ -238,43 +247,50 @@
                                     <action selector="averageIncome:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="1G3-ga-NfD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-ok-rPe">
+                                <rect key="frame" x="20" y="64" width="40" height="37.5"/>
+                                <state key="normal" image="searchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="vFm-H9-xUA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwS-ca-Cct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aOY-yt-gpM" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="0Rm-v1-2sx"/>
                             <constraint firstItem="iDg-uw-wSG" firstAttribute="top" secondItem="BpU-bd-Nff" secondAttribute="bottom" constant="35" id="1oW-Ge-PMV"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="height" secondItem="BAD-gb-ue6" secondAttribute="height" multiplier="0.5" id="238-BG-DQq"/>
-                            <constraint firstItem="aOY-yt-gpM" firstAttribute="leading" secondItem="bX5-C6-Cgw" secondAttribute="trailing" constant="7.5" id="3dG-BZ-Jkq"/>
+                            <constraint firstItem="KTc-S8-uHI" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="4lp-vQ-ceN"/>
+                            <constraint firstItem="BpU-bd-Nff" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="6I3-sF-MyZ"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="oI7-ma-gZx" secondAttribute="trailing" constant="20" id="7KG-nv-u0d"/>
+                            <constraint firstItem="xm0-es-E6n" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="8Bj-m7-9pZ"/>
+                            <constraint firstItem="yyn-0d-TOg" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="8LZ-xL-aVF"/>
+                            <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="KTc-S8-uHI" secondAttribute="trailing" constant="20" id="8S3-Ft-GI2"/>
                             <constraint firstItem="Cjl-hu-3Xi" firstAttribute="top" secondItem="unh-oa-DuP" secondAttribute="bottom" constant="35" id="9Dr-fu-BOY"/>
                             <constraint firstItem="unh-oa-DuP" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="AD0-wR-s4e"/>
-                            <constraint firstItem="yyn-0d-TOg" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="FeY-zh-dBb"/>
+                            <constraint firstItem="KTc-S8-uHI" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="AT4-Zl-k8w"/>
+                            <constraint firstItem="SpI-ok-rPe" firstAttribute="top" secondItem="pwS-ca-Cct" secondAttribute="top" constant="20" id="Cpr-jq-s4d"/>
                             <constraint firstItem="xm0-es-E6n" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="Gmp-so-VEx"/>
-                            <constraint firstItem="xm0-es-E6n" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="GyT-qE-Q7L"/>
+                            <constraint firstItem="SpI-ok-rPe" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="H36-7d-csM"/>
                             <constraint firstItem="iDg-uw-wSG" firstAttribute="centerX" secondItem="BAD-gb-ue6" secondAttribute="centerX" id="HJN-le-pLu"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="Mfv-RV-vOn" secondAttribute="trailing" constant="20" id="L90-vz-4Nr"/>
                             <constraint firstItem="Cjl-hu-3Xi" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="LHZ-JJ-S7R"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="lIR-xt-PQx" secondAttribute="trailing" id="LXQ-e1-dEW"/>
+                            <constraint firstItem="Mfv-RV-vOn" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="MfX-on-vv7"/>
                             <constraint firstItem="ljE-yj-QOe" firstAttribute="centerX" secondItem="BAD-gb-ue6" secondAttribute="centerX" id="NHA-eQ-Y2z"/>
                             <constraint firstItem="BpU-bd-Nff" firstAttribute="centerX" secondItem="BAD-gb-ue6" secondAttribute="centerX" id="OBL-66-bFF"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="AtU-4D-s07" secondAttribute="trailing" constant="20" id="QXx-iu-Zi1"/>
-                            <constraint firstItem="heQ-gD-q59" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="S5o-th-cr8"/>
-                            <constraint firstItem="bX5-C6-Cgw" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="SMR-PX-38a"/>
                             <constraint firstItem="ljE-yj-QOe" firstAttribute="top" secondItem="BpU-bd-Nff" secondAttribute="bottom" constant="35" id="VcP-fk-L51"/>
-                            <constraint firstItem="Mfv-RV-vOn" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="WAA-XR-anW"/>
                             <constraint firstItem="79r-Kz-UvU" firstAttribute="top" secondItem="unh-oa-DuP" secondAttribute="bottom" constant="35" id="Y3h-aZ-ytE"/>
-                            <constraint firstItem="unh-oa-DuP" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="YOe-7E-X6L"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" id="Z9Y-sU-sRP"/>
                             <constraint firstItem="heQ-gD-q59" firstAttribute="centerX" secondItem="BAD-gb-ue6" secondAttribute="centerX" id="aRp-x8-9pu"/>
-                            <constraint firstItem="bX5-C6-Cgw" firstAttribute="top" secondItem="lIR-xt-PQx" secondAttribute="bottom" constant="20" id="ahV-WJ-p4o"/>
+                            <constraint firstItem="heQ-gD-q59" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="cCv-rX-fSk"/>
                             <constraint firstItem="AtU-4D-s07" firstAttribute="top" secondItem="yyn-0d-TOg" secondAttribute="bottom" constant="35" id="cYH-d4-Uo8"/>
-                            <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="aOY-yt-gpM" secondAttribute="trailing" constant="20" id="e80-rK-01r"/>
                             <constraint firstItem="79r-Kz-UvU" firstAttribute="leading" secondItem="pwS-ca-Cct" secondAttribute="leading" constant="20" id="gw6-sz-q1W"/>
+                            <constraint firstItem="unh-oa-DuP" firstAttribute="top" secondItem="KTc-S8-uHI" secondAttribute="bottom" constant="50" id="jxx-eG-dHG"/>
                             <constraint firstItem="pwS-ca-Cct" firstAttribute="trailing" secondItem="yyn-0d-TOg" secondAttribute="trailing" constant="20" id="kzL-W7-8sJ"/>
                             <constraint firstItem="oI7-ma-gZx" firstAttribute="top" secondItem="yyn-0d-TOg" secondAttribute="bottom" constant="35" id="uTK-bu-qnf"/>
                             <constraint firstItem="lIR-xt-PQx" firstAttribute="top" secondItem="BAD-gb-ue6" secondAttribute="top" id="wfw-cG-Utm"/>
-                            <constraint firstItem="BpU-bd-Nff" firstAttribute="top" secondItem="bX5-C6-Cgw" secondAttribute="bottom" constant="50" id="x4V-aE-iss"/>
                         </constraints>
                     </view>
                     <connections>
@@ -286,9 +302,12 @@
                         <outlet property="favoriteButton" destination="aOY-yt-gpM" id="P1o-og-iTK"/>
                         <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="s3o-lV-jQ3"/>
                         <outlet property="mapView" destination="lIR-xt-PQx" id="pGD-oi-sEr"/>
+                        <outlet property="popUpTextView" destination="KvL-Ud-59S" id="Ghl-Oh-1Ux"/>
+                        <outlet property="popUpTitleLabel" destination="ATH-sR-0TL" id="8uc-Kc-VuB"/>
                         <outlet property="popUpView" destination="YWh-bY-hc2" id="0UN-33-2lH"/>
                         <outlet property="rentalPriceLabel" destination="Qqf-vy-Mid" id="QoC-Bk-Mgq"/>
                         <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="l70-Sn-kHY"/>
+                        <segue destination="VlK-ee-2GT" kind="presentation" identifier="unwindToSearch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="TYc-z5-gAZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-Ja-brA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -302,7 +321,7 @@
                     <blurEffect style="regular"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" id="YWh-bY-hc2">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="386"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lY6-oD-pGL">
@@ -313,16 +332,44 @@
                                 <action selector="cancelPopUpView:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="5T2-4T-qKV"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATH-sR-0TL">
+                            <rect key="frame" x="20" y="20" width="66.5" height="33.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KvL-Ud-59S">
+                            <rect key="frame" x="20" y="73.5" width="200" height="292.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="gJf-ML-sJR"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="gJf-ML-sJR" firstAttribute="trailing" secondItem="lY6-oD-pGL" secondAttribute="trailing" constant="5" id="E3g-3S-sKg"/>
+                        <constraint firstItem="KvL-Ud-59S" firstAttribute="leading" secondItem="gJf-ML-sJR" secondAttribute="leading" constant="20" id="JKA-gT-ici"/>
                         <constraint firstItem="lY6-oD-pGL" firstAttribute="top" secondItem="YWh-bY-hc2" secondAttribute="top" constant="5" id="JZX-Tz-WmW"/>
+                        <constraint firstItem="ATH-sR-0TL" firstAttribute="top" secondItem="YWh-bY-hc2" secondAttribute="top" constant="20" id="XBI-Nj-MOV"/>
+                        <constraint firstItem="gJf-ML-sJR" firstAttribute="bottom" secondItem="KvL-Ud-59S" secondAttribute="bottom" constant="20" id="XSw-Dv-dGL"/>
+                        <constraint firstItem="ATH-sR-0TL" firstAttribute="leading" secondItem="YWh-bY-hc2" secondAttribute="leading" constant="20" id="YHc-7T-4ME"/>
+                        <constraint firstItem="gJf-ML-sJR" firstAttribute="trailing" secondItem="KvL-Ud-59S" secondAttribute="trailing" constant="20" id="Yna-VZ-UGq"/>
+                        <constraint firstItem="KvL-Ud-59S" firstAttribute="top" secondItem="ATH-sR-0TL" secondAttribute="bottom" constant="20" id="aRI-FF-j0V"/>
                     </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="376.81159420289856" y="180.80357142857142"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="7yy-nP-CQS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="VlK-ee-2GT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iM8-wD-8Zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="181"/>
         </scene>
     </scenes>
     <resources>
@@ -332,6 +379,8 @@
         <image name="income" width="35" height="35"/>
         <image name="livability" width="35" height="35"/>
         <image name="rentalPrice" width="25" height="22.5"/>
+        <image name="searchIcon" width="40" height="37.5"/>
+        <image name="uncheckedHeart" width="28" height="27"/>
         <image name="walkability" width="35" height="35"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentYellow">
@@ -340,6 +389,9 @@
         <namedColor name="DarkBlue">
             <color red="0.063000001013278961" green="0.27099999785423279" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

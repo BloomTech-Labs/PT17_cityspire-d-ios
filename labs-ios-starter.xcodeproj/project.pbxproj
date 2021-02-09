@@ -20,7 +20,8 @@
 		46BEB4EE24C98ECC00FE0CD1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEB4ED24C98ECC00FE0CD1 /* ProfileController.swift */; };
 		46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */; };
 		46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */; };
-		C3A726BC25CBAE1F009B2FBE /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A726BB25CBAE1F009B2FBE /* MapScreenViewController.swift */; };
+		C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */; };
+		C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D6E3525D07F150025842E /* FavoritesCollectionViewCell.swift */; };
 		C3BEDE8A25C27271006BF31A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8925C27271006BF31A /* Search.storyboard */; };
 		C3BEDE8D25C2728D006BF31A /* MapScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */; };
 		C3BEDE9025C272A0006BF31A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */; };
@@ -47,7 +48,8 @@
 		46BEB4ED24C98ECC00FE0CD1 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SimpleAlert.swift"; sourceTree = "<group>"; };
 		46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
-		C3A726BB25CBAE1F009B2FBE /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
+		C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
+		C37D6E3525D07F150025842E /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3BEDE8925C27271006BF31A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapScreen.storyboard; sourceTree = "<group>"; };
 		C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
@@ -166,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */,
-				C3A726BB25CBAE1F009B2FBE /* MapScreenViewController.swift */,
+				C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */,
 			);
 			path = "Map Screen";
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 			children = (
 				C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */,
 				C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */,
+				C37D6E3525D07F150025842E /* FavoritesCollectionViewCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -266,9 +269,10 @@
 				46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */,
 				46BEB4E724C98D8900FE0CD1 /* Notifications.swift in Sources */,
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,
-				C3A726BC25CBAE1F009B2FBE /* MapScreenViewController.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
 				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
+				C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */,
+				C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */,
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
 				46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */,
 				46BEB4E524C98CDC00FE0CD1 /* LoginViewController.swift in Sources */,

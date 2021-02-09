@@ -15,8 +15,8 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var popUpView: UIView!
     
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var favoriteButton: UIButton!
     
+    @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var employmentLabel: UILabel!
     @IBOutlet var averageAgeLabel: UILabel!
@@ -24,6 +24,9 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var rentalPriceLabel: UILabel!
     @IBOutlet var walkabilityLabel: UILabel!
     @IBOutlet var averageIncomeLabel: UILabel!
+    
+    @IBOutlet var popUpTitleLabel: UILabel!
+    @IBOutlet var popUpTextView: UITextView!
     
     override var prefersStatusBarHidden: Bool { return true }
 
@@ -34,11 +37,15 @@ class MapScreenViewController: UIViewController {
         popUpView.layer.cornerRadius = 5.0
 
     }
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToSearch", sender: self)
+    }
+    @IBAction func favoriteCityPressed(_ sender: Any) {
+    }
     
     @IBAction func employmentPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
-        
     }
     
     @IBAction func walkabilityPressed(_ sender: Any) {
