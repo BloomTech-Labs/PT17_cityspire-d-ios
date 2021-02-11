@@ -11,6 +11,10 @@ import MapKit
 
 class MapScreenViewController: UIViewController {
     
+    var longitude: CLLocationDegrees = -121.478851
+    var latitude: CLLocationDegrees = 38.575764
+    var city: String = "Sacramento, CA"
+    
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
     
@@ -32,6 +36,20 @@ class MapScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let annotations = self.mapView.annotations
+        self.mapView.removeAnnotations(annotations)
+        
+        let annotation = MKPointAnnotation()
+        annotation.title = city
+        annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        self.mapView.addAnnotation(annotation)
+        
+        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        self.mapView.setRegion(region, animated: true)
+        
+        
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
