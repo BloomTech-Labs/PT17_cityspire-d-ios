@@ -53,7 +53,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         activeSearch.start { (response, error) in
             if response == nil {
-                print("error")
+                Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
             } else {
                 self.searchResponse.long = (response?.boundingRegion.center.longitude)!
                 self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
