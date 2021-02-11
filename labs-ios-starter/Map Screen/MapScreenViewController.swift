@@ -122,5 +122,12 @@ class MapScreenViewController: UIViewController {
             desiredView.removeFromSuperview()
         })
     }
-    
+}
+
+extension MapScreenViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+        annotationView.markerTintColor = UIColor(named: "LightBlue")
+        return annotationView
+    }
 }
