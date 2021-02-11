@@ -69,6 +69,9 @@ dolor sit amet</string>
                                     <constraint firstAttribute="width" constant="360" id="rfe-oE-2Ib"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7Fk-Ad-CIb" id="MCM-GU-2YE"/>
+                                </connections>
                             </searchBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touristMap" translatesAutoresizingMaskIntoConstraints="NO" id="XIi-pr-dlF">
                                 <rect key="frame" x="0.0" y="590" width="414" height="306"/>
@@ -116,11 +119,21 @@ dolor sit amet</string>
                     </view>
                     <connections>
                         <outlet property="backgroundGradient" destination="frE-Ow-IiM" id="TtY-Mr-TBD"/>
+                        <outlet property="searchBar" destination="rWl-W9-8WM" id="jz9-6h-A42"/>
+                        <segue destination="9k4-1Y-ICJ" kind="presentation" identifier="toMap" modalPresentationStyle="fullScreen" id="mza-cw-6BN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yE-FL-ajC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489.85507246376818" y="129.91071428571428"/>
+        </scene>
+        <!--MapScreen-->
+        <scene sceneID="UZL-Rt-hic">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapScreen" id="9k4-1Y-ICJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoP-4t-8Gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="65"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="ENq-cX-3NS">
