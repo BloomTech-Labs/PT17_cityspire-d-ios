@@ -12,6 +12,7 @@ import MapKit
 class SearchViewController: UIViewController {
     
     var searchResponse = Map()
+    let api = "https://h-ds2.cityspire.dev/"
     
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
