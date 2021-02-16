@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 
 class MapScreenViewController: UIViewController {
+
+    var searchItem = Map()
     
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
@@ -32,6 +34,20 @@ class MapScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let annotations = self.mapView.annotations
+        self.mapView.removeAnnotations(annotations)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2DMake(searchItem.lat, searchItem.long)
+        self.mapView.addAnnotation(annotation)
+        
+        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(searchItem.lat, searchItem.long)
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        self.mapView.setRegion(region, animated: true)
+        
+        cityLabel.text = searchItem.cityName
+        
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
@@ -106,5 +122,12 @@ class MapScreenViewController: UIViewController {
             desiredView.removeFromSuperview()
         })
     }
-    
+}
+
+extension MapScreenViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+        annotationView.markerTintColor = UIColor(named: "LightBlue")
+        return annotationView
+    }
 }

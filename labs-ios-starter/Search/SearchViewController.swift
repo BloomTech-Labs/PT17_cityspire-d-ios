@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
 class SearchViewController: UIViewController {
     
+    var searchResponse = Map()
+    
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +35,31 @@ class SearchViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMap" {
+            let vc = segue.destination as! MapScreenViewController
+            vc.searchItem = searchResponse
+        }
+    }
 
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchRequest = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = searchBar.text
+        let activeSearch = MKLocalSearch(request: searchRequest)
+        
+        activeSearch.start { (response, error) in
+            if response == nil {
+                Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
+            } else {
+                self.searchResponse.long = (response?.boundingRegion.center.longitude)!
+                self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
+                self.searchResponse.cityName = searchBar.text!
+                self.performSegue(withIdentifier: "toMap", sender: self)
+            }
+        }
+    }
 }
