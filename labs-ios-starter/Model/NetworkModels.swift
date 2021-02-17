@@ -14,3 +14,13 @@ struct Walkability: Codable {
     let transit_score: Int?
     let bike_score: Int
 }
+
+//struct Pollution: Codable {
+//    let AQUI_index: Int
+//    let description: PollutionDescription
+//}
+//
+//struct PollutionDescription: Codable {
+//    let Health_Implecations: String
+//    let Cauutinary_statement_PM2 : String?
+//}
