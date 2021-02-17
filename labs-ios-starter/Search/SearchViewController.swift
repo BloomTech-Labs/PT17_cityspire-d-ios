@@ -48,7 +48,9 @@ class SearchViewController: UIViewController {
                     print("error")
                     return
                 }
-                print(walkability!.walk_score)
+                DispatchQueue.main.async {
+                    vc.walkabilityLabel.text = "\(walkability!.walk_score)"
+                }
             }
         }
     }

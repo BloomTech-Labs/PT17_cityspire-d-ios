@@ -29,7 +29,7 @@ class MapScreenViewController: UIViewController {
     
     @IBOutlet var popUpTitleLabel: UILabel!
     @IBOutlet var popUpTextView: UITextView!
-    
+            
     override var prefersStatusBarHidden: Bool { return true }
 
     override func viewDidLoad() {
