@@ -12,7 +12,8 @@ import MapKit
 class SearchViewController: UIViewController {
     
     var searchResponse = Map()
-    let api = "https://h-ds2.cityspire.dev/"
+    var network = NetworkClient()
+
     
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
@@ -41,14 +42,31 @@ class SearchViewController: UIViewController {
         if segue.identifier == "toMap" {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
+                    
+            network.getWalkability(address: createStringURL(searchBar.text!), lat: "\(self.searchResponse.lat)", lon: "\(self.searchResponse.long)") { (walkability, error) in
+                if error != nil {
+                    print("error")
+                    return
+                }
+                print(walkability!.walk_score)
+            }
         }
     }
-
+    
+    func createStringURL(_ input: String) -> String {
+        var string = ""
+        
+        string = input.replacingOccurrences(of: ",", with: "%2C")
+        string = string.replacingOccurrences(of: " ", with: "%20")
+        
+        return string
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchRequest = MKLocalSearch.Request()
+        
         searchRequest.naturalLanguageQuery = searchBar.text
         let activeSearch = MKLocalSearch(request: searchRequest)
         
@@ -59,6 +77,7 @@ extension SearchViewController: UISearchBarDelegate {
                 self.searchResponse.long = (response?.boundingRegion.center.longitude)!
                 self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
                 self.searchResponse.cityName = searchBar.text!
+                
                 self.performSegue(withIdentifier: "toMap", sender: self)
             }
         }

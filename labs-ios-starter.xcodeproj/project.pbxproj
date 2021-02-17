@@ -21,6 +21,7 @@
 		46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */; };
 		46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */; };
 		C31B35AB25DB7BB300F5436E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B35AA25DB7BB300F5436E /* NetworkClient.swift */; };
+		C31B35AE25DB7E3000F5436E /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B35AD25DB7E3000F5436E /* NetworkModels.swift */; };
 		C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */; };
 		C34804EB25D4E9C3007CEA5A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34804EA25D4E9C3007CEA5A /* Map.swift */; };
 		C34804EE25D4F640007CEA5A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34804ED25D4F640007CEA5A /* Alert.swift */; };
@@ -52,6 +53,7 @@
 		46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SimpleAlert.swift"; sourceTree = "<group>"; };
 		46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
 		C31B35AA25DB7BB300F5436E /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		C31B35AD25DB7E3000F5436E /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
 		C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
 		C34804EA25D4E9C3007CEA5A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		C34804ED25D4F640007CEA5A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				46BEB4E024C9828800FE0CD1 /* Profile.swift */,
 				C34804EA25D4E9C3007CEA5A /* Map.swift */,
 				C34804ED25D4F640007CEA5A /* Alert.swift */,
+				C31B35AD25DB7E3000F5436E /* NetworkModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
 				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
 				C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */,
+				C31B35AE25DB7E3000F5436E /* NetworkModels.swift in Sources */,
 				C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */,
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
 				46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */,
