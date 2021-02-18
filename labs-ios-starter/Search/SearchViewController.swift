@@ -45,13 +45,16 @@ class SearchViewController: UIViewController {
                     
             network.getWalkability(address: createStringURL(searchBar.text!), lat: "\(self.searchResponse.lat)", lon: "\(self.searchResponse.long)") { (walkability, error) in
                 if error != nil {
-                    print("error")
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
                     return
                 }
                 DispatchQueue.main.async {
                     vc.walkabilityLabel.text = "\(walkability!.walk_score)"
                     vc.activityView.stopAnimating()
                     vc.animateOut(desiredView: vc.blurView)
+                    print(walkability!)
                 }
             }
         }
