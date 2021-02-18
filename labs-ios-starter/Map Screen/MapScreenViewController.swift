@@ -39,6 +39,7 @@ class MapScreenViewController: UIViewController {
         
         animateIn(desiredView: blurView, mid: true)
         activityView.center = self.view.center
+        activityView.color = UIColor(named: "LightBlue")
         self.view.addSubview(activityView)
         activityView.startAnimating()
         
