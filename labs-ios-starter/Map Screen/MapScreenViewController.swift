@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class MapScreenViewController: UIViewController {
-
+    
     var searchItem = Map()
     
     @IBOutlet var blurView: UIVisualEffectView!
@@ -29,11 +29,19 @@ class MapScreenViewController: UIViewController {
     
     @IBOutlet var popUpTitleLabel: UILabel!
     @IBOutlet var popUpTextView: UITextView!
-            
+    
+    var activityView = UIActivityIndicatorView(style: .large)
+    
     override var prefersStatusBarHidden: Bool { return true }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animateIn(desiredView: blurView, mid: true)
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
+        
         let annotations = self.mapView.annotations
         self.mapView.removeAnnotations(annotations)
         
@@ -51,7 +59,7 @@ class MapScreenViewController: UIViewController {
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
-
+        
     }
     @IBAction func searchButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)

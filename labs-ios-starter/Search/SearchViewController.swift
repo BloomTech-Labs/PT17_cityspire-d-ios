@@ -50,6 +50,8 @@ class SearchViewController: UIViewController {
                 }
                 DispatchQueue.main.async {
                     vc.walkabilityLabel.text = "\(walkability!.walk_score)"
+                    vc.activityView.stopAnimating()
+                    vc.animateOut(desiredView: vc.blurView)
                 }
             }
         }
