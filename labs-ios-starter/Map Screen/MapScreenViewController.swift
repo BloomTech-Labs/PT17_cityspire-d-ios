@@ -98,6 +98,7 @@ class MapScreenViewController: UIViewController {
     @IBAction func cancelPopUpView(_ sender: Any) {
         animateOut(desiredView: popUpView)
         animateOut(desiredView: blurView)
+        popUpTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
     func animateIn(desiredView: UIView, mid: Bool) {

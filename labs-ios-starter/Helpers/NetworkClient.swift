@@ -15,7 +15,7 @@ struct NetworkClient {
         
         let endpoint = "walk_score?address=\(address))&lat=\("\(lat)")&lon=\("\(lon)")"
         guard let url = URL(string: api + endpoint) else { return }
-        
+
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
