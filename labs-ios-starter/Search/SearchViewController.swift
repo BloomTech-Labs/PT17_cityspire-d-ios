@@ -14,7 +14,6 @@ class SearchViewController: UIViewController {
     var searchResponse = Map()
     var network = NetworkClient()
     
-    
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
