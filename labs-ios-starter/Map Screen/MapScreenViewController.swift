@@ -84,7 +84,6 @@ class MapScreenViewController: UIViewController {
             annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
             annotation.title = "For Rent"
             annotation.subtitle = object.address.line
-            print(object.community.price_max)
             self.mapView.addAnnotation(annotation)
         }
     }

@@ -64,7 +64,6 @@ class SearchViewController: UIViewController {
                     vc.setUpViews()
                     vc.activityView.stopAnimating()
                     vc.animateOut(desiredView: vc.blurView)
-                    print(walkability!)
                 }
             }
             network.getRentals(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
