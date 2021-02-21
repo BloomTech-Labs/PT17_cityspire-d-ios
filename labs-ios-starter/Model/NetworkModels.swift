@@ -19,6 +19,11 @@ struct ForRent: Codable {
     let address: Address
 }
 
+struct ForSale: Codable {
+    let address: Address
+    let price: Double
+}
+
 struct Address: Codable {
     let line: String
     let lat: Double

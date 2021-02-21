@@ -13,6 +13,7 @@ class MapScreenViewController: UIViewController {
     
     var searchItem = Map()
     var forRentObjects: [ForRent] = []
+    var forSaleObjects: [ForSale] = []
         
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
@@ -64,6 +65,15 @@ class MapScreenViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
             annotation.title = "For Rent"
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
+    func forSale() {
+        for object in forSaleObjects {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
+            annotation.title = "For Sale"
             self.mapView.addAnnotation(annotation)
         }
     }
@@ -152,6 +162,9 @@ extension MapScreenViewController: MKMapViewDelegate {
         switch annotation.title {
         case "For Rent":
             annotationView.markerTintColor = UIColor(named: "AccentYellow")
+            annotationView.glyphImage = UIImage(systemName: "house.fill")
+        case "For Sale":
+            annotationView.markerTintColor = .red
             annotationView.glyphImage = UIImage(systemName: "house.fill")
         default:
             annotationView.markerTintColor = UIColor(named: "LightBlue")

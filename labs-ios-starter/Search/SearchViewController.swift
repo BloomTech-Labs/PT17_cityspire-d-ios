@@ -78,6 +78,18 @@ class SearchViewController: UIViewController {
                     vc.forRentals()
                 }
             }
+            network.getForSale(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forSale, error) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    vc.forSaleObjects = forSale!
+                    vc.forSale()
+                }
+            }
         }
     }
 }
