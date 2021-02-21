@@ -17,6 +17,11 @@ struct Walkability: Codable {
 
 struct ForRent: Codable {
     let address: Address
+    let community: Community
+}
+
+struct Community: Codable {
+    let price_max: Int
 }
 
 struct ForSale: Codable {

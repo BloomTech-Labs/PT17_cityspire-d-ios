@@ -65,6 +65,8 @@ class MapScreenViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
             annotation.title = "For Rent"
+            annotation.subtitle = object.address.line
+            print(object.community.price_max)
             self.mapView.addAnnotation(annotation)
         }
     }
@@ -74,6 +76,7 @@ class MapScreenViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
             annotation.title = "For Sale"
+            annotation.subtitle = object.address.line
             self.mapView.addAnnotation(annotation)
         }
     }
