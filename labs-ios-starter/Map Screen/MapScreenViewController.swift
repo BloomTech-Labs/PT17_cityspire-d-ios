@@ -106,6 +106,7 @@ class MapScreenViewController: UIViewController {
     }
     
     @IBAction func employmentPressed(_ sender: Any) {
+        popUpTextView.text = employmentStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Employment"
@@ -119,24 +120,28 @@ class MapScreenViewController: UIViewController {
     }
     
     @IBAction func averageAgePressed(_ sender: Any) {
+        popUpTextView.text = ageStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Average Age"
     }
     
     @IBAction func livabilityPressed(_ sender: Any) {
+        popUpTextView.text = livabilityStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Livability"
     }
     
     @IBAction func rentalPressed(_ sender: Any) {
+        popUpTextView.text = rentalStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Average Rent"
     }
     
     @IBAction func averageIncome(_ sender: Any) {
+        popUpTextView.text = incomeStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Average Income"
