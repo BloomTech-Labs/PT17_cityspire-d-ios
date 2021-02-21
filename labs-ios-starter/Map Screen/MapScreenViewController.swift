@@ -64,7 +64,7 @@ class MapScreenViewController: UIViewController {
         cityLabel.text = searchItem.cityName
         
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
+        popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width / 1.5, height: self.view.frame.height / 3.5)
         popUpView.layer.cornerRadius = 5.0
     }
     
