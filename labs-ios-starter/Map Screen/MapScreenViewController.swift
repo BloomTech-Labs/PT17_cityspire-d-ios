@@ -164,8 +164,8 @@ extension MapScreenViewController: MKMapViewDelegate {
             annotationView.markerTintColor = UIColor(named: "AccentYellow")
             annotationView.glyphImage = UIImage(systemName: "house.fill")
         case "For Sale":
-            annotationView.markerTintColor = .red
-            annotationView.glyphImage = UIImage(systemName: "house.fill")
+            annotationView.markerTintColor = UIColor(named: "LightBlue")
+            annotationView.glyphImage = UIImage(systemName: "dollarsign.circle.fill")
         default:
             annotationView.markerTintColor = UIColor(named: "LightBlue")
         }
