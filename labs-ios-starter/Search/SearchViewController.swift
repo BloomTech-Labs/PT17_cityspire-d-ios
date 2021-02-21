@@ -66,7 +66,7 @@ class SearchViewController: UIViewController {
                     print(walkability!)
                 }
             }
-            network.getRentals(city: "Chico", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
+            network.getRentals(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -74,7 +74,8 @@ class SearchViewController: UIViewController {
                     return
                 }
                 DispatchQueue.main.async {
-                    print(forRent!)
+                    vc.forRentObjects = forRent!
+                    vc.forRentals()
                 }
             }
         }

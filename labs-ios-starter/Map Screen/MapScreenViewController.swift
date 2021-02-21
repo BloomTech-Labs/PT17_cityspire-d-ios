@@ -12,7 +12,8 @@ import MapKit
 class MapScreenViewController: UIViewController {
     
     var searchItem = Map()
-    
+    var forRentObjects: [ForRent] = []
+        
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
     
@@ -46,10 +47,6 @@ class MapScreenViewController: UIViewController {
         let annotations = self.mapView.annotations
         self.mapView.removeAnnotations(annotations)
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(searchItem.lat, searchItem.long)
-        self.mapView.addAnnotation(annotation)
-        
         let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(searchItem.lat, searchItem.long)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
@@ -60,8 +57,17 @@ class MapScreenViewController: UIViewController {
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
-        
     }
+    
+    func forRentals() {
+        for object in forRentObjects {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
+            annotation.title = "For Rent"
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
     @IBAction func searchButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }
@@ -142,8 +148,14 @@ class MapScreenViewController: UIViewController {
 
 extension MapScreenViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
-        annotationView.markerTintColor = UIColor(named: "LightBlue")
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "CityMain")
+        switch annotation.title {
+        case "For Rent":
+            annotationView.markerTintColor = UIColor(named: "AccentYellow")
+            annotationView.glyphImage = UIImage(systemName: "house.fill")
+        default:
+            annotationView.markerTintColor = UIColor(named: "LightBlue")
+        }
         return annotationView
     }
 }
