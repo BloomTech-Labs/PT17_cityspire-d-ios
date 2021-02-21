@@ -12,6 +12,7 @@ import MapKit
 class MapScreenViewController: UIViewController {
     
     var searchItem = Map()
+    var walkability: Walkability?
     var forRentObjects: [ForRent] = []
     var forSaleObjects: [ForSale] = []
         
@@ -58,6 +59,11 @@ class MapScreenViewController: UIViewController {
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
+    }
+    
+    func setUpViews() {
+        walkabilityLabel.text = "\(walkability!.walk_score)"
+
     }
     
     func forRentals() {
