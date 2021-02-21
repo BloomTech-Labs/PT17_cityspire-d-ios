@@ -15,18 +15,12 @@ struct Walkability: Codable {
     let bike_score: Int
 }
 
-struct Livability: Codable {
-    let AQI_index: Int
-    let description: LivabilityJSONObject
-    
+struct ForRent: Codable {
+    let address: Address
 }
 
-struct LivabilityJSONObject: Codable {
-    let healthImplecations: String
-    let cautinaryStatement: String
-    
-    enum CodingKeys: String, CodingKey {
-        case healthImplecations = "Health_Implecations"
-        case cautinaryStatement = "Cautinary_statement_PM2.5"
-    }
+struct Address: Codable {
+    let line: String
+    let lat: Double
+    let lon: Double
 }

@@ -31,8 +31,82 @@ struct NetworkClient {
             
             if let data = data {
                 do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    print(json)
                     let walkability = try JSONDecoder().decode(Walkability.self, from: data)
                     completion(walkability, nil)
+                } catch let jsonError {
+                    completion(nil, jsonError)
+                }
+            }
+            
+        }
+        task.resume()
+    }
+    
+    func getRentals(city: String, state: String, type: String, limit: Int, completion: @escaping (ForRent?, Error?) -> ()) {
+        let endpoint = "for_rent_list?api_key=%2A%2A%2A%2A%2A%2A%2A%2A%2A%2A&city=\(city)&state=\(state)&prop_type=\(type)&limit=\(limit)"
+        guard let url = URL(string: api + endpoint) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                print("Error with the response, unexpected status code: \(response!)")
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let forRent = try JSONDecoder().decode(Array<ForRent>.self, from: data)
+                    completion(forRent.first, nil)
+                } catch let jsonError {
+                    print(jsonError)
+                    completion(nil, jsonError)
+                }
+            }
+            
+        }
+        task.resume()
+    }
+    
+    func getCrimeData(cityName: String, stateAbbreviation: String, completion: @escaping (CrimeData?, Error?) -> ()) {
+        let endpoint = "crime_data"
+        guard let url = URL(string: api + endpoint) else { return }
+        
+        let parameters = ["city_name": cityName, "state_abbreviation": stateAbbreviation]
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+        urlRequest.httpBody = httpBody
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                print("Error with the response, unexpected status code: \(response!)")
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    print(json)
+                    let crimeData = try JSONDecoder().decode(CrimeData.self, from: data)
+                    print(crimeData)
+                    completion(crimeData, nil)
                 } catch let jsonError {
                     completion(nil, jsonError)
                 }

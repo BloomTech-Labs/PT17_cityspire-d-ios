@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     
     var searchResponse = Map()
     var network = NetworkClient()
-
+    
     
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
         setGradientBackgroundColor()
         // Do any additional setup after loading the view.
     }
-     
+    
     // MARK: - Background gradient
     
     /// Sets the gradient colors for the background view
@@ -38,11 +38,20 @@ class SearchViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
     
+    func createStringURL(_ input: String) -> String {
+        var string = ""
+        
+        string = input.replacingOccurrences(of: ",", with: "%2C")
+        string = string.replacingOccurrences(of: " ", with: "%20")
+        
+        return string
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMap" {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
-                    
+            
             network.getWalkability(address: createStringURL(searchBar.text!), lat: "\(self.searchResponse.lat)", lon: "\(self.searchResponse.long)") { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
@@ -57,36 +66,38 @@ class SearchViewController: UIViewController {
                     print(walkability!)
                 }
             }
-        }
-    }
-    
-    func createStringURL(_ input: String) -> String {
-        var string = ""
-        
-        string = input.replacingOccurrences(of: ",", with: "%2C")
-        string = string.replacingOccurrences(of: " ", with: "%20")
-        
-        return string
-    }
-}
-
-extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let searchRequest = MKLocalSearch.Request()
-        
-        searchRequest.naturalLanguageQuery = searchBar.text
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        
-        activeSearch.start { (response, error) in
-            if response == nil {
-                Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
-            } else {
-                self.searchResponse.long = (response?.boundingRegion.center.longitude)!
-                self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
-                self.searchResponse.cityName = searchBar.text!
-                
-                self.performSegue(withIdentifier: "toMap", sender: self)
+            network.getRentals(city: "Chico", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    print(forRent!)
+                }
             }
         }
     }
 }
+    
+    extension SearchViewController: UISearchBarDelegate {
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            let searchRequest = MKLocalSearch.Request()
+            
+            searchRequest.naturalLanguageQuery = searchBar.text
+            let activeSearch = MKLocalSearch(request: searchRequest)
+            
+            activeSearch.start { (response, error) in
+                if response == nil {
+                    Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
+                } else {
+                    self.searchResponse.long = (response?.boundingRegion.center.longitude)!
+                    self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
+                    self.searchResponse.cityName = searchBar.text!
+                    
+                    self.performSegue(withIdentifier: "toMap", sender: self)
+                }
+            }
+        }
+    }
