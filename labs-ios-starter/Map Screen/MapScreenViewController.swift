@@ -13,6 +13,13 @@ class MapScreenViewController: UIViewController {
     
     var searchItem = Map()
     var walkability: Walkability?
+    var employmentStatement: String = ""
+    var walkabilityStatement: String = ""
+    var incomeStatement: String = ""
+    var ageStatement: String = ""
+    var livabilityStatement: String = ""
+    var rentalStatement: String = ""
+
     var forRentObjects: [ForRent] = []
     var forSaleObjects: [ForSale] = []
         
@@ -63,6 +70,11 @@ class MapScreenViewController: UIViewController {
     
     func setUpViews() {
         walkabilityLabel.text = "\(walkability!.walk_score)"
+        if walkability?.transit_score == nil {
+            walkabilityStatement = "The overall walkability score of \(searchItem.cityName) ranks \(walkability!.walk_score) out of 100. This means that \(walkability!.walk_message). It also has a bike score of \(walkability!.bike_score)"
+        } else {
+            walkabilityStatement = "The overall walkability score of \(searchItem.cityName) ranks \(walkability!.walk_score). This means that \(walkability!.walk_message). It also has a bike score of \(walkability!.bike_score) and a transit score of \(walkability!.transit_score!)."
+        }
 
     }
     
@@ -100,6 +112,7 @@ class MapScreenViewController: UIViewController {
     }
     
     @IBAction func walkabilityPressed(_ sender: Any) {
+        popUpTextView.text = walkabilityStatement
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
         popUpTitleLabel.text = "Walkability"
