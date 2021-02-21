@@ -61,8 +61,8 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     vc.walkability = walkability
                     vc.setUpViews()
-                    vc.activityView.stopAnimating()
-                    vc.animateOut(desiredView: vc.blurView)
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
                 }
             }
             network.getRentals(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
@@ -75,6 +75,8 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     vc.forRentObjects = forRent!
                     vc.forRentals()
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
                 }
             }
             network.getForSale(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forSale, error) in
@@ -87,6 +89,8 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     vc.forSaleObjects = forSale!
                     vc.forSale()
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
                 }
             }
         }

@@ -11,6 +11,7 @@ import MapKit
 
 class MapScreenViewController: UIViewController {
     
+    var counterForBlurView: Int = 3
     var searchItem = Map()
     var walkability: Walkability?
     var employmentStatement: String = ""
@@ -66,6 +67,13 @@ class MapScreenViewController: UIViewController {
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width / 1.5, height: self.view.frame.height / 3.5)
         popUpView.layer.cornerRadius = 5.0
+    }
+    
+    func checkCounter(){
+        if counterForBlurView == 0{
+            activityView.stopAnimating()
+            animateOut(desiredView: blurView)
+        }
     }
     
     func setUpViews() {
