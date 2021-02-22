@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     
     var searchResponse = Map()
     var network = NetworkClient()
+    var city = ""
+    var state = ""
     
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
@@ -37,13 +39,19 @@ class SearchViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
     
-    func createStringURL(_ input: String) -> String {
-        var string = ""
-        
-        string = input.replacingOccurrences(of: ",", with: "%2C")
-        string = string.replacingOccurrences(of: " ", with: "%20")
-        
-        return string
+    func createStringURL(_ input: String) {
+        var address = input
+        address = address.replacingOccurrences(of: ",", with: "")
+        for char in address {
+            if char == " " {
+                address = address.replacingOccurrences(of: " ", with: "")
+                address = address.replacingOccurrences(of: city, with: "")
+                state = address
+                return
+            } else {
+                city.append(char)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +59,7 @@ class SearchViewController: UIViewController {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
             
-            network.getWalkability(city: "Sacramento", state: "CA") { (walkability, error) in
+            network.getWalkability(city: city, state: state) { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -65,7 +73,7 @@ class SearchViewController: UIViewController {
                     vc.checkCounter()
                 }
             }
-            network.getRentals(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
+            network.getRentals(city: city, state: state, type: "single_familiy", limit: 4) { (forRent, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -79,7 +87,7 @@ class SearchViewController: UIViewController {
                     vc.checkCounter()
                 }
             }
-            network.getForSale(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forSale, error) in
+            network.getForSale(city: city, state: state, type: "single_familiy", limit: 4) { (forSale, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -111,8 +119,10 @@ class SearchViewController: UIViewController {
                     self.searchResponse.long = (response?.boundingRegion.center.longitude)!
                     self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
                     self.searchResponse.cityName = searchBar.text!
-                    
-                    self.performSegue(withIdentifier: "toMap", sender: self)
+                    self.createStringURL(searchBar.text!)
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.performSegue(withIdentifier: "toMap", sender: self)                    }
                 }
             }
         }
