@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class MapScreenViewController: UIViewController {
-
+    
     var searchItem = Map()
     
     @IBOutlet var blurView: UIVisualEffectView!
@@ -30,10 +30,19 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var popUpTitleLabel: UILabel!
     @IBOutlet var popUpTextView: UITextView!
     
+    var activityView = UIActivityIndicatorView(style: .large)
+    
     override var prefersStatusBarHidden: Bool { return true }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animateIn(desiredView: blurView, mid: true)
+        activityView.center = self.view.center
+        activityView.color = UIColor(named: "LightBlue")
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
+        
         let annotations = self.mapView.annotations
         self.mapView.removeAnnotations(annotations)
         
@@ -51,7 +60,7 @@ class MapScreenViewController: UIViewController {
         blurView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         popUpView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height - 300)
         popUpView.layer.cornerRadius = 5.0
-
+        
     }
     @IBAction func searchButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -62,36 +71,43 @@ class MapScreenViewController: UIViewController {
     @IBAction func employmentPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Employment"
     }
     
     @IBAction func walkabilityPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Walkability"
     }
     
     @IBAction func averageAgePressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Average Age"
     }
     
     @IBAction func livabilityPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Livability"
     }
     
     @IBAction func rentalPressed(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Average Rent"
     }
     
     @IBAction func averageIncome(_ sender: Any) {
         animateIn(desiredView: blurView, mid: true)
         animateIn(desiredView: popUpView, mid: true)
+        popUpTitleLabel.text = "Average Income"
     }
     
     @IBAction func cancelPopUpView(_ sender: Any) {
         animateOut(desiredView: popUpView)
         animateOut(desiredView: blurView)
+        popUpTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
     func animateIn(desiredView: UIView, mid: Bool) {
