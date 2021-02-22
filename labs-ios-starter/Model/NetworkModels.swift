@@ -14,3 +14,23 @@ struct Walkability: Codable {
     let transit_score: Int?
     let bike_score: Int
 }
+
+struct ForRent: Codable {
+    let address: Address
+    let community: Community
+}
+
+struct Community: Codable {
+    let price_max: Int
+}
+
+struct ForSale: Codable {
+    let address: Address
+    let price: Double
+}
+
+struct Address: Codable {
+    let line: String
+    let lat: Double
+    let lon: Double
+}

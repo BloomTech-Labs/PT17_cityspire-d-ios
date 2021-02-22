@@ -13,7 +13,6 @@ class SearchViewController: UIViewController {
     
     var searchResponse = Map()
     var network = NetworkClient()
-
     
     // MARK: Outlets
     @IBOutlet weak var backgroundGradient: UIView!
@@ -24,7 +23,7 @@ class SearchViewController: UIViewController {
         setGradientBackgroundColor()
         // Do any additional setup after loading the view.
     }
-     
+    
     // MARK: - Background gradient
     
     /// Sets the gradient colors for the background view
@@ -38,25 +37,6 @@ class SearchViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMap" {
-            let vc = segue.destination as! MapScreenViewController
-            vc.searchItem = searchResponse
-                    
-            network.getWalkability(address: createStringURL(searchBar.text!), lat: "\(self.searchResponse.lat)", lon: "\(self.searchResponse.long)") { (walkability, error) in
-                if error != nil {
-                    print("error")
-                    return
-                }
-                DispatchQueue.main.async {
-                    vc.walkabilityLabel.text = "\(walkability!.walk_score)"
-                    vc.activityView.stopAnimating()
-                    vc.animateOut(desiredView: vc.blurView)
-                }
-            }
-        }
-    }
-    
     func createStringURL(_ input: String) -> String {
         var string = ""
         
@@ -65,25 +45,75 @@ class SearchViewController: UIViewController {
         
         return string
     }
-}
-
-extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let searchRequest = MKLocalSearch.Request()
-        
-        searchRequest.naturalLanguageQuery = searchBar.text
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        
-        activeSearch.start { (response, error) in
-            if response == nil {
-                Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
-            } else {
-                self.searchResponse.long = (response?.boundingRegion.center.longitude)!
-                self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
-                self.searchResponse.cityName = searchBar.text!
-                
-                self.performSegue(withIdentifier: "toMap", sender: self)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMap" {
+            let vc = segue.destination as! MapScreenViewController
+            vc.searchItem = searchResponse
+            
+            network.getWalkability(city: "Sacramento", state: "CA") { (walkability, error) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    vc.walkability = walkability
+                    vc.setUpViews()
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
+                }
+            }
+            network.getRentals(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forRent, error) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    vc.forRentObjects = forRent!
+                    vc.forRentals()
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
+                }
+            }
+            network.getForSale(city: "Sacramento", state: "CA", type: "single_familiy", limit: 4) { (forSale, error) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    vc.forSaleObjects = forSale!
+                    vc.forSale()
+                    vc.counterForBlurView -= 1
+                    vc.checkCounter()
+                }
             }
         }
     }
 }
+    
+    extension SearchViewController: UISearchBarDelegate {
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            let searchRequest = MKLocalSearch.Request()
+            
+            searchRequest.naturalLanguageQuery = searchBar.text
+            let activeSearch = MKLocalSearch(request: searchRequest)
+            
+            activeSearch.start { (response, error) in
+                if response == nil {
+                    Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
+                } else {
+                    self.searchResponse.long = (response?.boundingRegion.center.longitude)!
+                    self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
+                    self.searchResponse.cityName = searchBar.text!
+                    
+                    self.performSegue(withIdentifier: "toMap", sender: self)
+                }
+            }
+        }
+    }
