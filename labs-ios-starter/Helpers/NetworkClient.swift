@@ -11,9 +11,9 @@ import Foundation
 struct NetworkClient {
     let api = "https://h-ds2.cityspire.dev/"
     
-    func getWalkability(address: String, lat: String, lon: String,  completion: @escaping (Walkability?, Error?) -> ()) {
+    func getWalkability(city: String, state: String, completion: @escaping (Walkability?, Error?) -> ()) {
         
-        let endpoint = "walk_score?address=\(address))&lat=\("\(lat)")&lon=\("\(lon)")"
+        let endpoint = "walk_score?city=\(city)&state=\(state)"
         guard let url = URL(string: api + endpoint) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

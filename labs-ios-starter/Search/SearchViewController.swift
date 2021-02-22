@@ -51,7 +51,7 @@ class SearchViewController: UIViewController {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
             
-            network.getWalkability(address: createStringURL(searchBar.text!), lat: "\(self.searchResponse.lat)", lon: "\(self.searchResponse.long)") { (walkability, error) in
+            network.getWalkability(city: "Sacramento", state: "CA") { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
