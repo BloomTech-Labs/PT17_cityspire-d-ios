@@ -41,12 +41,12 @@ class SearchViewController: UIViewController {
     
     func createStringURL(_ input: String) {
         var address = input
-        address = address.replacingOccurrences(of: ",", with: "")
         for char in address {
-            if char == " " {
-                address = address.replacingOccurrences(of: " ", with: "")
+            if char == "," {
                 address = address.replacingOccurrences(of: city, with: "")
                 state = address
+                state = state.replacingOccurrences(of: ",", with: "")
+                state = state.replacingOccurrences(of: " ", with: "")
                 return
             } else {
                 city.append(char)
@@ -54,12 +54,18 @@ class SearchViewController: UIViewController {
         }
     }
     
+    func safeCityString(_ input: String) -> String {
+        var city = input
+        city = city.replacingOccurrences(of: " ", with: "%20")
+        return city
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMap" {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
             
-            network.getWalkability(city: city, state: state) { (walkability, error) in
+            network.getWalkability(city: safeCityString(city), state: state) { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -73,7 +79,7 @@ class SearchViewController: UIViewController {
                     vc.checkCounter()
                 }
             }
-            network.getRentals(city: city, state: state, type: "single_familiy", limit: 4) { (forRent, error) in
+            network.getRentals(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forRent, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -87,7 +93,7 @@ class SearchViewController: UIViewController {
                     vc.checkCounter()
                 }
             }
-            network.getForSale(city: city, state: state, type: "single_familiy", limit: 4) { (forSale, error) in
+            network.getForSale(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forSale, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -104,26 +110,26 @@ class SearchViewController: UIViewController {
         }
     }
 }
-    
-    extension SearchViewController: UISearchBarDelegate {
-        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            let searchRequest = MKLocalSearch.Request()
-            
-            searchRequest.naturalLanguageQuery = searchBar.text
-            let activeSearch = MKLocalSearch(request: searchRequest)
-            
-            activeSearch.start { (response, error) in
-                if response == nil {
-                    Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
-                } else {
-                    self.searchResponse.long = (response?.boundingRegion.center.longitude)!
-                    self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
-                    self.searchResponse.cityName = searchBar.text!
-                    self.createStringURL(searchBar.text!)
 
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        self.performSegue(withIdentifier: "toMap", sender: self)                    }
-                }
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchRequest = MKLocalSearch.Request()
+        
+        searchRequest.naturalLanguageQuery = searchBar.text
+        let activeSearch = MKLocalSearch(request: searchRequest)
+        
+        activeSearch.start { (response, error) in
+            if response == nil {
+                Alert.showBasicAlert(on: self, with: "Invalid Input", message: "Please use the format of \"City, State\"")
+            } else {
+                self.searchResponse.long = (response?.boundingRegion.center.longitude)!
+                self.searchResponse.lat = (response?.boundingRegion.center.latitude)!
+                self.searchResponse.cityName = searchBar.text!
+                self.createStringURL(searchBar.text!)
+                self.performSegue(withIdentifier: "toMap", sender: self)
+                
+                
             }
         }
     }
+}

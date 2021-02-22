@@ -14,6 +14,7 @@ struct NetworkClient {
     func getWalkability(city: String, state: String, completion: @escaping (Walkability?, Error?) -> ()) {
         
         let endpoint = "walk_score?city=\(city)&state=\(state)"
+        print(endpoint)
         guard let url = URL(string: api + endpoint) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -44,6 +45,7 @@ struct NetworkClient {
     
     func getRentals(city: String, state: String, type: String, limit: Int, completion: @escaping ([ForRent]?, Error?) -> ()) {
         let endpoint = "for_rent_list?api_key=%2A%2A%2A%2A%2A%2A%2A%2A%2A%2A&city=\(city)&state=\(state)&prop_type=\(type)&limit=\(limit)"
+        print(endpoint)
         guard let url = URL(string: api + endpoint) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -74,6 +76,8 @@ struct NetworkClient {
     
     func getForSale(city: String, state: String, type: String, limit: Int, completion: @escaping ([ForSale]?, Error?) -> ()) {
         let endpoint = "for_sale_list?api_key=%2A%2A%2A%2A%2A%2A%2A%2A%2A%2A&city=\(city)&state=\(state)&prop_type=\(type)&limit=\(limit)"
+        print(endpoint)
+
         guard let url = URL(string: api + endpoint) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
