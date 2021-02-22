@@ -49,10 +49,17 @@
                                     <segue destination="dcE-4f-NcJ" kind="presentation" modalPresentationStyle="fullScreen" id="aAr-qi-g6M"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CitySpireLogo-Dark" translatesAutoresizingMaskIntoConstraints="NO" id="41U-LN-ghq">
+                                <rect key="frame" x="87" y="277" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="z7C-82-CiM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R8l-LV-vJe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="41U-LN-ghq" firstAttribute="centerX" secondItem="CQk-Xf-had" secondAttribute="centerX" id="Ft3-cE-afU"/>
                             <constraint firstItem="CQk-Xf-had" firstAttribute="centerX" secondItem="INU-fS-Snd" secondAttribute="centerX" id="MBI-zP-DgD"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="trailing" secondItem="1rE-Kz-bu3" secondAttribute="trailing" constant="20" id="RNt-tz-aKz"/>
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="bottom" secondItem="mXo-da-Z8S" secondAttribute="bottom" constant="50" id="Wc3-VK-D5X"/>
@@ -60,6 +67,8 @@
                             <constraint firstItem="R8l-LV-vJe" firstAttribute="trailing" secondItem="mXo-da-Z8S" secondAttribute="trailing" constant="50" id="eWr-Fb-o2F"/>
                             <constraint firstItem="cY4-Oc-Cfw" firstAttribute="leading" secondItem="INU-fS-Snd" secondAttribute="leading" id="hd3-KG-tlz"/>
                             <constraint firstItem="1rE-Kz-bu3" firstAttribute="bottom" secondItem="R8l-LV-vJe" secondAttribute="bottom" id="jrM-mS-IVc"/>
+                            <constraint firstItem="41U-LN-ghq" firstAttribute="top" secondItem="R8l-LV-vJe" secondAttribute="top" constant="233" id="wh9-I1-M3S"/>
+                            <constraint firstItem="41U-LN-ghq" firstAttribute="leading" secondItem="R8l-LV-vJe" secondAttribute="leading" constant="87" id="x1d-ac-kpw"/>
                             <constraint firstItem="CQk-Xf-had" firstAttribute="top" secondItem="cY4-Oc-Cfw" secondAttribute="bottom" constant="13" id="zCL-Mq-jUm"/>
                             <constraint firstItem="cY4-Oc-Cfw" firstAttribute="top" secondItem="INU-fS-Snd" secondAttribute="topMargin" constant="-49" id="zzE-8j-bym"/>
                         </constraints>
@@ -178,6 +187,7 @@
         <segue reference="dot-8d-cdO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="CitySpireLogo-Dark" width="234" height="66"/>
         <image name="Map" width="374.5" height="605"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <namedColor name="LightBlue">
