@@ -54,6 +54,8 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         let region = MKCoordinateRegion(center: coordinate, span: span)
         cell.mapView.setRegion(region, animated: true)
         
+        cell.cityTitleLabel.text = favorites![indexPath.row].name
+        
         return cell
     }
     

@@ -116,6 +116,7 @@ class MapScreenViewController: UIViewController {
         let favorite = Favorite(context: context)
         favorite.lat = searchItem.lat
         favorite.lon = searchItem.long
+        favorite.name = searchItem.cityName
         
         do {
             try context.save()
