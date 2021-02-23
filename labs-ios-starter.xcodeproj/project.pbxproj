@@ -31,7 +31,7 @@
 		C3BEDE9025C272A0006BF31A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */; };
 		C3BEDE9325C2731D006BF31A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9225C2731D006BF31A /* SearchViewController.swift */; };
 		C3BEDE9925C2733B006BF31A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */; };
-		F33B8B6F25E4C6AB0057A1E5 /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8B6E25E4C6AB0057A1E5 /* SearchScreenTests.swift */; };
+		F33B8B8A25E4C9020057A1E5 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */; };
 		F35C107C25C78949000AA795 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35C107B25C78949000AA795 /* Colors.xcassets */; };
 		F35C107F25C791E0000AA795 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C107E25C791E0000AA795 /* CardView.swift */; };
 		F363987C25CEEA53008C5102 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F363987B25CEEA53008C5102 /* StyledButton.swift */; };
@@ -76,7 +76,7 @@
 		C3BEDE9825C2733B006BF31A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F33B8B6025E4C6820057A1E5 /* labs-ios-starterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "labs-ios-starterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33B8B6425E4C6820057A1E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F33B8B6E25E4C6AB0057A1E5 /* SearchScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTests.swift; sourceTree = "<group>"; };
+		F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		F35C107B25C78949000AA795 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F35C107E25C791E0000AA795 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F363987B25CEEA53008C5102 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				F33B8B6425E4C6820057A1E5 /* Info.plist */,
-				F33B8B6E25E4C6AB0057A1E5 /* SearchScreenTests.swift */,
+				F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */,
 			);
 			path = "labs-ios-starterUITests";
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F33B8B6F25E4C6AB0057A1E5 /* SearchScreenTests.swift in Sources */,
+				F33B8B8A25E4C9020057A1E5 /* LoginScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
