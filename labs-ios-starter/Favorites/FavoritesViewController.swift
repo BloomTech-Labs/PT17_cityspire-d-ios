@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import CoreData
+import MapKit
 
 class FavoritesViewController: UIViewController {
     
     @IBOutlet var colletionView: UICollectionView!
     
+    var favorites: [Favorite]?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchFavorites()
     }
+    
+    func fetchFavorites() {
+        do {
+            self.favorites = try context.fetch(Favorite.fetchRequest())
+            
+            DispatchQueue.main.async {
+                self.colletionView.reloadData()
+            }
+        }
+        catch {
+            
+        }
+                
+    }
+    
     @IBAction func backNavigationButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }
@@ -23,11 +44,17 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return favorites?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteCell", for: indexPath) as! FavoritesCollectionViewCell
+        
+        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(favorites![indexPath.row].lat, favorites![indexPath.row].lon)
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        cell.mapView.setRegion(region, animated: true)
+        
         return cell
     }
     
