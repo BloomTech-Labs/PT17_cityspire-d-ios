@@ -52,7 +52,7 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(favorites![indexPath.row].lat, favorites![indexPath.row].lon)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
-        cell.mapView.setRegion(region, animated: true)
+        cell.mapView.setRegion(region, animated: false)
         
         cell.cityTitleLabel.text = favorites![indexPath.row].name
         
