@@ -9,21 +9,10 @@
 import UIKit
 import MapKit
 
+/// Class to control mapView and city information to be retrieved
 class MapScreenViewController: UIViewController {
     
-    var counterForBlurView: Int = 3
-    var searchItem = Map()
-    var walkability: Walkability?
-    var employmentStatement: String = ""
-    var walkabilityStatement: String = ""
-    var incomeStatement: String = ""
-    var ageStatement: String = ""
-    var livabilityStatement: String = ""
-    var rentalStatement: String = ""
-
-    var forRentObjects: [ForRent] = []
-    var forSaleObjects: [ForSale] = []
-        
+    // MARK: - IBOutlets
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
     
@@ -40,6 +29,20 @@ class MapScreenViewController: UIViewController {
     
     @IBOutlet var popUpTitleLabel: UILabel!
     @IBOutlet var popUpTextView: UITextView!
+    
+    // MARK: - Properties
+    var counterForBlurView: Int = 3
+    var searchItem = Map()
+    var walkability: Walkability?
+    var employmentStatement: String = ""
+    var walkabilityStatement: String = ""
+    var incomeStatement: String = ""
+    var ageStatement: String = ""
+    var livabilityStatement: String = ""
+    var rentalStatement: String = ""
+
+    var forRentObjects: [ForRent] = []
+    var forSaleObjects: [ForSale] = []
     
     var activityView = UIActivityIndicatorView(style: .large)
     
@@ -76,6 +79,7 @@ class MapScreenViewController: UIViewController {
         }
     }
     
+    /// Sets the card view the user tapped on to display more information
     func setUpViews() {
         walkabilityLabel.text = "\(walkability!.walk_score)"
         if walkability?.transit_score == nil {
@@ -86,6 +90,7 @@ class MapScreenViewController: UIViewController {
 
     }
     
+    /// Adds map pins for rentals
     func forRentals() {
         for object in forRentObjects {
             let annotation = MKPointAnnotation()
@@ -96,6 +101,7 @@ class MapScreenViewController: UIViewController {
         }
     }
     
+    /// Adds map pins for properties for sale
     func forSale() {
         for object in forSaleObjects {
             let annotation = MKPointAnnotation()
@@ -106,6 +112,7 @@ class MapScreenViewController: UIViewController {
         }
     }
     
+    // MARK: - IBActions
     @IBAction func searchButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }

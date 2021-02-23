@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-// Created Map to pull out useful data from the MKLocalSearch to display on the map page
+/// Created Map to pull out useful data from the MKLocalSearch to display on the map page
 struct Map {
     var long: CLLocationDegrees = 0
     var lat: CLLocationDegrees = 0
