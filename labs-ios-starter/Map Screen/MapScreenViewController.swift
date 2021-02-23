@@ -8,8 +8,11 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapScreenViewController: UIViewController {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var counterForBlurView: Int = 3
     var searchItem = Map()
@@ -110,6 +113,16 @@ class MapScreenViewController: UIViewController {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }
     @IBAction func favoriteCityPressed(_ sender: Any) {
+        let favorite = Favorite(context: context)
+        favorite.lat = searchItem.lat
+        favorite.lon = searchItem.long
+        
+        do {
+            try context.save()
+        }
+        catch {
+            print("error saving data")
+        }
     }
     
     @IBAction func employmentPressed(_ sender: Any) {

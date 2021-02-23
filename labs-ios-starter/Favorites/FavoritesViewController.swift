@@ -18,8 +18,7 @@ class FavoritesViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
         fetchFavorites()
     }
     
@@ -32,7 +31,7 @@ class FavoritesViewController: UIViewController {
             }
         }
         catch {
-            
+            print("error fetching data")
         }
                 
     }
