@@ -54,6 +54,9 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         let region = MKCoordinateRegion(center: coordinate, span: span)
         cell.mapView.setRegion(region, animated: false)
         
+        cell.favoriteButton.tag = indexPath.row
+        cell.favoriteButton.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
+        
         cell.cityTitleLabel.text = favorites![indexPath.row].name
         
         return cell
@@ -62,5 +65,17 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height / 3)
         }
+    
+    @objc func buttonClicked(sender: UIButton) {
+        self.context.delete(self.favorites![sender.tag])
+        
+        do {
+            try self.context.save()
+            self.fetchFavorites()
+        }
+        catch {
+            print("error deleting")
+        }
+    }
     
 }
