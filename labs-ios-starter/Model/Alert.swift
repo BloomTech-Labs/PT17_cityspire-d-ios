@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-// Alert that allows global use throughout app with changed responses on the stated view controller
+/// Alert that allows global use throughout app with changed responses on the stated view controller
 struct Alert {
     static func showBasicAlert(on vc: UIViewController, with title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

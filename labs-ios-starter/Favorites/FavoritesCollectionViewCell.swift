@@ -9,8 +9,10 @@
 import UIKit
 import MapKit
 
+/// Class collection view cell that holds map view, labels and buttons for the Favorites screen
 class FavoritesCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var cityTitleLabel: UILabel!
     @IBOutlet var favoriteButton: UIButton!

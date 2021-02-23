@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class SearchViewController: UIViewController {
-    
+    // MARK: - Properties
     var searchResponse = Map()
     var network = NetworkClient()
     var city = ""
@@ -39,6 +39,7 @@ class SearchViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
     }
     
+    /// Creates a string based on the search query entered by the user
     func createStringURL(_ input: String) {
         var address = input
         for char in address {

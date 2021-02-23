@@ -8,14 +8,17 @@
 
 import UIKit
 
+/// Class to handle logic for Favorites screen collection view
 class FavoritesViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet var colletionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    // MARK: - IBActions
     @IBAction func backNavigationButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToSearch", sender: self)
     }
