@@ -117,6 +117,7 @@ class MapScreenViewController: UIViewController {
         favorite.lat = searchItem.lat
         favorite.lon = searchItem.long
         favorite.name = searchItem.cityName
+        favorite.walkabilityScore = Int64(walkability!.walk_score)
         
         do {
             try context.save()

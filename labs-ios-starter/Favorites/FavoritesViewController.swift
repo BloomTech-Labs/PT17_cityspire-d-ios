@@ -59,6 +59,8 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         
         cell.cityTitleLabel.text = favorites![indexPath.row].name
         
+        cell.walkabilityLabel.text = "Walkability: \(favorites![indexPath.row].walkabilityScore)"
+        
         return cell
     }
     
