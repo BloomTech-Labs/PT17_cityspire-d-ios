@@ -44,12 +44,14 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jT-R8-b6T">
                                                             <rect key="frame" x="0.0" y="0.0" width="354.5" height="33.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="cityLabel"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <color key="textColor" name="DarkBlue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hj-Vw-4aT">
                                                             <rect key="frame" x="354.5" y="0.0" width="39.5" height="33.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="favoriteButton"/>
                                                             <state key="normal" image="favoriteButton"/>
                                                         </button>
                                                     </subviews>
@@ -63,18 +65,21 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-zp-rkE">
                                                             <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="livabilityLabel"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <color key="textColor" name="MedBlue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyV-p6-sPa">
                                                             <rect key="frame" x="130" y="0.0" width="130" height="20.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="walkabilityLabel"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <color key="textColor" name="MedBlue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-US-7l1">
                                                             <rect key="frame" x="264" y="0.0" width="130" height="20.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="incomeLabel"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <color key="textColor" name="MedBlue"/>
                                                             <nil key="highlightedColor"/>
@@ -132,6 +137,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u7a-cm-yHu">
                                 <rect key="frame" x="20" y="3" width="94" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backToSearch"/>
                                 <state key="normal" image="searchIcon"/>
                                 <connections>
                                     <action selector="backNavigationButtonPressed:" destination="fhG-KI-gxj" eventType="touchUpInside" id="jQr-Ph-JCx"/>
