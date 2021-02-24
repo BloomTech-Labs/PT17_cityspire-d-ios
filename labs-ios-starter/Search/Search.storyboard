@@ -25,27 +25,23 @@
                                 <rect key="frame" x="0.0" y="562" width="414" height="334"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFG-Cc-DMo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Let's start with where do you see yourself next? " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFG-Cc-DMo">
                                 <rect key="frame" x="20" y="251" width="374" height="105"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="cAn-9R-9T8"/>
                                     <constraint firstAttribute="height" constant="105" id="zSA-lx-15X"/>
                                 </constraints>
-                                <string key="text">Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqJ-tT-hhk">
-                                <rect key="frame" x="20" y="144.5" width="374" height="100.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great experiences are just around the corner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqJ-tT-hhk">
+                                <rect key="frame" x="20" y="101.5" width="374" height="143.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="8Yc-nl-ich"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum 
-dolor sit amet</string>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,7 +58,7 @@ dolor sit amet</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a location" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-W9-8WM">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for your new home" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-W9-8WM">
                                 <rect key="frame" x="27" y="426" width="360" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
