@@ -29,12 +29,14 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-C6-Cgw">
                                         <rect key="frame" x="0.0" y="0.0" width="336.5" height="41"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="cityLabel"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" name="DarkBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
                                         <rect key="frame" x="336.5" y="0.0" width="37.5" height="41"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="favoritesButton"/>
                                         <state key="normal" image="uncheckedHeart"/>
                                         <state key="selected" image="favoriteButton"/>
                                         <connections>
@@ -192,6 +194,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heQ-gD-q59">
                                 <rect key="frame" x="155" y="559" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="walkabilityButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="1iE-ac-L7m"/>
                                     <constraint firstAttribute="height" constant="92" id="z08-xA-Qxw"/>
@@ -202,6 +205,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xm0-es-E6n">
                                 <rect key="frame" x="20" y="559" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="employmentIcon"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="3Kj-5i-kjF"/>
                                     <constraint firstAttribute="width" constant="104" id="v0x-SH-cXS"/>
@@ -212,6 +216,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjl-hu-3Xi">
                                 <rect key="frame" x="20" y="686" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ageButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="53e-EQ-eWq"/>
                                     <constraint firstAttribute="height" constant="92" id="mEe-nB-C7x"/>
@@ -222,6 +227,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-uw-wSG">
                                 <rect key="frame" x="155" y="686" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="livabilityButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="Zif-QN-bPR"/>
                                     <constraint firstAttribute="height" constant="92" id="skt-oM-l7j"/>
@@ -232,6 +238,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-ma-gZx">
                                 <rect key="frame" x="290" y="686" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rentalButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="ELx-Kb-l0v"/>
                                     <constraint firstAttribute="height" constant="92" id="RiH-X3-Wao"/>
@@ -242,6 +249,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfv-RV-vOn">
                                 <rect key="frame" x="290" y="559" width="104" height="92"/>
+                                <accessibility key="accessibilityConfiguration" identifier="incomeButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="QGd-Cc-7pY"/>
                                     <constraint firstAttribute="width" constant="104" id="mzZ-Pe-ZnW"/>
@@ -252,6 +260,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-ok-rPe">
                                 <rect key="frame" x="20" y="64" width="40" height="37.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backToSearch"/>
                                 <state key="normal" image="searchIcon"/>
                                 <connections>
                                     <action selector="searchButtonPressed:" destination="k2w-x0-7Q1" eventType="touchUpInside" id="vFm-H9-xUA"/>

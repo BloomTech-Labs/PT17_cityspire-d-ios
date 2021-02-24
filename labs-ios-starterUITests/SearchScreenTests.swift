@@ -57,7 +57,7 @@ class SearchScreenTests: XCTestCase {
         let searchElement = app.searchFields["Search for your new home"]
         searchElement.tap()
         
-        app.typeText("Chicago,IL\n")
+        app.typeText("New York\n")
         
         XCTAssertTrue(app.maps.element.waitForExistence(timeout: 2))
         
