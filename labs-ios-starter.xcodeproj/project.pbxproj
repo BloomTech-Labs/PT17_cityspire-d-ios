@@ -26,6 +26,7 @@
 		C34804EB25D4E9C3007CEA5A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34804EA25D4E9C3007CEA5A /* Map.swift */; };
 		C34804EE25D4F640007CEA5A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34804ED25D4F640007CEA5A /* Alert.swift */; };
 		C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D6E3525D07F150025842E /* FavoritesCollectionViewCell.swift */; };
+		C380305625E4C2F400CB8B60 /* CitySpire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C380305425E4C2F400CB8B60 /* CitySpire.xcdatamodeld */; };
 		C3BEDE8A25C27271006BF31A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8925C27271006BF31A /* Search.storyboard */; };
 		C3BEDE8D25C2728D006BF31A /* MapScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */; };
 		C3BEDE9025C272A0006BF31A /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */; };
@@ -72,6 +73,7 @@
 		C34804EA25D4E9C3007CEA5A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		C34804ED25D4F640007CEA5A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C37D6E3525D07F150025842E /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C380305525E4C2F400CB8B60 /* CitySpire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CitySpire.xcdatamodel; sourceTree = "<group>"; };
 		C3BEDE8925C27271006BF31A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapScreen.storyboard; sourceTree = "<group>"; };
 		C3BEDE8F25C272A0006BF31A /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				465DAA2724BD0BC100D94C24 /* App Lifecycle */,
 				466C427C249A8749007D033E /* Assets.xcassets */,
 				466C4281249A8749007D033E /* Info.plist */,
+				C380305425E4C2F400CB8B60 /* CitySpire.xcdatamodeld */,
 				466C4287249A889F007D033E /* File Organization.md */,
 				F35C107B25C78949000AA795 /* Colors.xcassets */,
 			);
@@ -366,6 +369,7 @@
 				46BEB4E524C98CDC00FE0CD1 /* LoginViewController.swift in Sources */,
 				C3BEDE9925C2733B006BF31A /* FavoritesViewController.swift in Sources */,
 				F363987C25CEEA53008C5102 /* StyledButton.swift in Sources */,
+				C380305625E4C2F400CB8B60 /* CitySpire.xcdatamodeld in Sources */,
 				466C4276249A8748007D033E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +664,19 @@
 			productName = OktaAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C380305425E4C2F400CB8B60 /* CitySpire.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C380305525E4C2F400CB8B60 /* CitySpire.xcdatamodel */,
+			);
+			currentVersion = C380305525E4C2F400CB8B60 /* CitySpire.xcdatamodel */;
+			path = CitySpire.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 466C4268249A8748007D033E /* Project object */;
 }
