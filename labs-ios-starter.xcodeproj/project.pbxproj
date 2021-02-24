@@ -34,6 +34,7 @@
 		F33B8B8A25E4C9020057A1E5 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */; };
 		F33B8B8E25E4CBDD0057A1E5 /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8B8D25E4CBDD0057A1E5 /* SearchScreenTests.swift */; };
 		F33B8BA125E5FED00057A1E5 /* MapScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8BA025E5FED00057A1E5 /* MapScreenUITests.swift */; };
+		F33B8BA725E6113D0057A1E5 /* FavoritesScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33B8BA625E6113D0057A1E5 /* FavoritesScreenTests.swift */; };
 		F35C107C25C78949000AA795 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35C107B25C78949000AA795 /* Colors.xcassets */; };
 		F35C107F25C791E0000AA795 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C107E25C791E0000AA795 /* CardView.swift */; };
 		F363987C25CEEA53008C5102 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F363987B25CEEA53008C5102 /* StyledButton.swift */; };
@@ -81,6 +82,7 @@
 		F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		F33B8B8D25E4CBDD0057A1E5 /* SearchScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTests.swift; sourceTree = "<group>"; };
 		F33B8BA025E5FED00057A1E5 /* MapScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenUITests.swift; sourceTree = "<group>"; };
+		F33B8BA625E6113D0057A1E5 /* FavoritesScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenTests.swift; sourceTree = "<group>"; };
 		F35C107B25C78949000AA795 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F35C107E25C791E0000AA795 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F363987B25CEEA53008C5102 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				F33B8B8925E4C9020057A1E5 /* LoginScreenTests.swift */,
 				F33B8B8D25E4CBDD0057A1E5 /* SearchScreenTests.swift */,
 				F33B8BA025E5FED00057A1E5 /* MapScreenUITests.swift */,
+				F33B8BA625E6113D0057A1E5 /* FavoritesScreenTests.swift */,
 			);
 			path = "labs-ios-starterUITests";
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				F33B8B8A25E4C9020057A1E5 /* LoginScreenTests.swift in Sources */,
 				F33B8B8E25E4CBDD0057A1E5 /* SearchScreenTests.swift in Sources */,
 				F33B8BA125E5FED00057A1E5 /* MapScreenUITests.swift in Sources */,
+				F33B8BA725E6113D0057A1E5 /* FavoritesScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
