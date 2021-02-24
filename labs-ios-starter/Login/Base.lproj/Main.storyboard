@@ -20,6 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXo-da-Z8S">
                                 <rect key="frame" x="343" y="790" width="21" height="22"/>
+                                <accessibility key="accessibilityConfiguration" identifier="skipOkta"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
                                 <connections>
@@ -49,7 +50,7 @@
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rE-Kz-bu3">
                                 <rect key="frame" x="343" y="832" width="51" height="30"/>
-                                <accessibility key="accessibilityConfiguration" identifier="skipOkta"/>
+                                <color key="tintColor" name="MedBlue"/>
                                 <state key="normal" title="To Map"/>
                                 <connections>
                                     <segue destination="dcE-4f-NcJ" kind="presentation" modalPresentationStyle="fullScreen" id="aAr-qi-g6M"/>
@@ -201,6 +202,9 @@
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <namedColor name="LightBlue">
             <color red="0.043000001460313797" green="0.47499999403953552" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MedBlue">
+            <color red="0.059000000357627869" green="0.37299999594688416" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
