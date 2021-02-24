@@ -52,7 +52,7 @@ City Spire analyzes data from cities such as populations, cost of living, rental
 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jenniferobanks/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/zacharyleehamilton/)                 |    
 
 ### [Back End Contributors](https://github.com/Lambda-School-Labs/cityspire-be-h)
-|                                                      [Aiden Dang](https://github.com/aidandang)                                                      |
+|                                                      [Aidan Dang](https://github.com/aidandang)                                                      |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://avatars.githubusercontent.com/u/59453200?s=400&u=b63fe7ed29d4cc93a650433585d987c635f59b20&v=4" width = "150" />](https://github.com/aidandang) |
 |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/aidandang)                                |
