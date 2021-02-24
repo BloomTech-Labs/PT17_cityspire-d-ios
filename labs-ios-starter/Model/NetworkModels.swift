@@ -35,7 +35,7 @@ struct ForSale: Codable {
 
 /// Information to get a specific address
 struct Address: Codable {
-    let line: String
+    let line: String?
     let lat: Double
     let lon: Double
 }
