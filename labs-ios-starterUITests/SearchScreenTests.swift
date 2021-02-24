@@ -8,6 +8,7 @@
 
 import XCTest
 
+/// Tests for Search Screen UI elements
 class SearchScreenTests: XCTestCase {
 
     var app: XCUIApplication!
@@ -49,5 +50,16 @@ class SearchScreenTests: XCTestCase {
         
         let searchTextElement = app.searchFields["Search for your new home"]
         XCTAssertEqual("Search for your new home", searchTextElement.placeholderValue)
+    }
+    
+    /// Wait for map screen to appear
+    func testSearch() {
+        let searchElement = app.searchFields["Search for your new home"]
+        searchElement.tap()
+        
+        app.typeText("Chicago,IL\n")
+        
+        XCTAssertTrue(app.maps.element.waitForExistence(timeout: 2))
+        
     }
 }
