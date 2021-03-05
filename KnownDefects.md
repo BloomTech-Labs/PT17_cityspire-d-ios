@@ -25,3 +25,5 @@
 - There are placeholder labels in the cells for use with important data pulled from JSON that we were unable to attain.
 ### Code:
 - Cells from CollectionView are unclickable. Does not segue to map viewcontroller.
+
+[Video Overview](https://www.loom.com/share/44386b011fc34f599ae2d15e49a561e1)
