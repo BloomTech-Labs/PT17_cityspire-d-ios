@@ -45,9 +45,6 @@ class MapScreenViewController: UIViewController {
     var livabilityStatement: String = ""
     var rentalStatement: String = ""
 
-    var forRentObjects: [ForRent] = []
-    var forSaleObjects: [ForSale] = []
-
     var activityView = UIActivityIndicatorView(style: .large)
 
     override var prefersStatusBarHidden: Bool { return true }
@@ -85,35 +82,8 @@ class MapScreenViewController: UIViewController {
 
     /// Sets the card view the user tapped on to display more information
     func setUpViews() {
-        walkabilityLabel.text = "\(walkability!.walk_score)"
-        if walkability?.transit_score == nil {
-            walkabilityStatement = "The overall walkability score of \(searchItem.cityName) ranks \(walkability!.walk_score) out of 100. This means that \(walkability!.walk_message). It also has a bike score of \(walkability!.bike_score)"
-        } else {
-            walkabilityStatement = "The overall walkability score of \(searchItem.cityName) ranks \(walkability!.walk_score). This means that \(walkability!.walk_message). It also has a bike score of \(walkability!.bike_score) and a transit score of \(walkability!.transit_score!)."
-        }
+        walkabilityLabel.text = "\(walkability!.walkability)"
 
-    }
-
-    /// Adds map pins for rentals
-    func forRentals() {
-        for object in forRentObjects {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
-            annotation.title = "For Rent"
-            annotation.subtitle = object.address.line
-            self.mapView.addAnnotation(annotation)
-        }
-    }
-
-    /// Adds map pins for properties for sale
-    func forSale() {
-        for object in forSaleObjects {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(object.address.lat, object.address.lon)
-            annotation.title = "For Sale"
-            annotation.subtitle = object.address.line
-            self.mapView.addAnnotation(annotation)
-        }
     }
 
     // MARK: - IBActions
@@ -125,7 +95,7 @@ class MapScreenViewController: UIViewController {
         favorite.lat = searchItem.lat
         favorite.lon = searchItem.long
         favorite.name = searchItem.cityName
-        favorite.walkabilityScore = Int64(walkability!.walk_score)
+        favorite.walkabilityScore = Int64(walkability!.walkability)
 
         do {
             try context.save()

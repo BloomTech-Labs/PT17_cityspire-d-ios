@@ -80,34 +80,6 @@ class SearchViewController: UIViewController {
                     vc.checkCounter()
                 }
             }
-            network.getRentals(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forRent, error) in
-                if error != nil {
-                    DispatchQueue.main.async {
-                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    vc.forRentObjects = forRent!
-                    vc.forRentals()
-                    vc.counterForBlurView -= 1
-                    vc.checkCounter()
-                }
-            }
-            network.getForSale(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forSale, error) in
-                if error != nil {
-                    DispatchQueue.main.async {
-                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    vc.forSaleObjects = forSale!
-                    vc.forSale()
-                    vc.counterForBlurView -= 1
-                    vc.checkCounter()
-                }
-            }
         }
     }
 }
