@@ -35,7 +35,7 @@ class MapScreenViewController: UIViewController {
     @IBOutlet var popUpTextView: UITextView!
 
     // MARK: - Properties
-    var counterForBlurView: Int = 3
+    var counterForBlurView: Int = 1
     var searchItem = Map()
     var walkability: Walkability?
     var employmentStatement: String = ""
