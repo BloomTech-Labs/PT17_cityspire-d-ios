@@ -8,7 +8,17 @@
 
 import Foundation
 
+/// Struct to use when encoding data for api POST calls
+struct PostParans: Encodable {
+    let city: String
+    let state: String
+}
+
 /// Information to display a city's walkability score
-struct Walkability: Codable {
+struct Walkability: Decodable {
     let walkability: Int
 }
+
+/// TODO: other decodable data to use
+
+

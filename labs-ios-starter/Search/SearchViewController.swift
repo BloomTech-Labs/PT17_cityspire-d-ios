@@ -55,18 +55,12 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func safeCityString(_ input: String) -> String {
-        var city = input
-        city = city.replacingOccurrences(of: " ", with: "%20")
-        return city
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMap" {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
             
-            network.getWalkability(city: safeCityString(city), state: state) { (walkability, error) in
+            network.getWalkability(city: city, state: state) { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
