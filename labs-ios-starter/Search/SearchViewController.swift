@@ -55,18 +55,12 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func safeCityString(_ input: String) -> String {
-        var city = input
-        city = city.replacingOccurrences(of: " ", with: "%20")
-        return city
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMap" {
             let vc = segue.destination as! MapScreenViewController
             vc.searchItem = searchResponse
             
-            network.getWalkability(city: safeCityString(city), state: state) { (walkability, error) in
+            network.getWalkability(city: city, state: state) { (walkability, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
@@ -76,34 +70,6 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     vc.walkability = walkability
                     vc.setUpViews()
-                    vc.counterForBlurView -= 1
-                    vc.checkCounter()
-                }
-            }
-            network.getRentals(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forRent, error) in
-                if error != nil {
-                    DispatchQueue.main.async {
-                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    vc.forRentObjects = forRent!
-                    vc.forRentals()
-                    vc.counterForBlurView -= 1
-                    vc.checkCounter()
-                }
-            }
-            network.getForSale(city: safeCityString(city), state: state, type: "single_familiy", limit: 4) { (forSale, error) in
-                if error != nil {
-                    DispatchQueue.main.async {
-                        vc.performSegue(withIdentifier: "unwindToSearch", sender: self)
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    vc.forSaleObjects = forSale!
-                    vc.forSale()
                     vc.counterForBlurView -= 1
                     vc.checkCounter()
                 }
