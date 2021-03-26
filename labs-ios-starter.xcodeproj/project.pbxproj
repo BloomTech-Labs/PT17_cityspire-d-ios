@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11BA618C260D763E00BD17BC /* MapDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BA618B260D763E00BD17BC /* MapDashboard.storyboard */; };
+		11BA6190260D765700BD17BC /* MapDashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */; };
 		463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AD24424CF2CDB00447BB8 /* AddProfileViewController.swift */; };
 		466C4274249A8748007D033E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C4273249A8748007D033E /* AppDelegate.swift */; };
 		466C4276249A8748007D033E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C4275249A8748007D033E /* SceneDelegate.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11BA618B260D763E00BD17BC /* MapDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDashboard.storyboard; sourceTree = "<group>"; };
+		11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDashboardTabBarController.swift; sourceTree = "<group>"; };
 		463AD24424CF2CDB00447BB8 /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
 		466C4270249A8748007D033E /* labs-ios-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "labs-ios-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		466C4273249A8748007D033E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */,
 				C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */,
+				11BA618B260D763E00BD17BC /* MapDashboard.storyboard */,
+				11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */,
 			);
 			path = "Map Screen";
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				466C4280249A8749007D033E /* LaunchScreen.storyboard in Resources */,
 				C3BEDE9025C272A0006BF31A /* Favorites.storyboard in Resources */,
 				466C427D249A8749007D033E /* Assets.xcassets in Resources */,
+				11BA618C260D763E00BD17BC /* MapDashboard.storyboard in Resources */,
 				C3BEDE8A25C27271006BF31A /* Search.storyboard in Resources */,
 				466C427B249A8748007D033E /* Main.storyboard in Resources */,
 				F35C107C25C78949000AA795 /* Colors.xcassets in Resources */,
@@ -361,6 +368,7 @@
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
 				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
+				11BA6190260D765700BD17BC /* MapDashboardTabBarController.swift in Sources */,
 				C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */,
 				C31B35AE25DB7E3000F5436E /* NetworkModels.swift in Sources */,
 				C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */,
