@@ -50,8 +50,7 @@
         <!--Dashboard-->
         <scene sceneID="17L-Yu-n28">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Brq-Nu-Gi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="2RW-rT-vz6" sceneMemberID="viewController">
+                <viewController id="2RW-rT-vz6" customClass="MapDashboardTabBarController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT1-QT-FcO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,12 +224,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-yt-gpM" userLabel="Favorite">
                                                     <rect key="frame" x="90" y="8" width="52" height="47"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="favoritesButton"/>
                                                     <state key="normal" image="favoriteButton"/>
                                                     <state key="selected" image="favoriteButton"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonPressed:" destination="2RW-rT-vz6" eventType="touchUpInside" id="NHa-Pw-jbK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -248,9 +250,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szD-od-WaM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szD-od-WaM" userLabel="Search">
                                 <rect key="frame" x="25" y="94" width="40" height="37.5"/>
                                 <state key="normal" image="searchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="2RW-rT-vz6" eventType="touchUpInside" id="5uR-te-Eye"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl8-2k-XvH">
                                 <rect key="frame" x="168.5" y="94" width="77" height="36"/>
@@ -288,7 +293,19 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="doc.on.clipboard" catalog="system" id="rLC-af-feu"/>
+                    <connections>
+                        <outlet property="averageAgeLabel" destination="ihY-EL-lXB" id="1r5-q9-Ht7"/>
+                        <outlet property="averageIncomeLabel" destination="Rqj-rJ-2vT" id="4HL-Cd-K3e"/>
+                        <outlet property="cityNameLabel" destination="Jl8-2k-XvH" id="Tgl-Jg-ZC1"/>
+                        <outlet property="employmentLabel" destination="Z3I-O0-Jve" id="8QN-JN-WNb"/>
+                        <outlet property="favoriteButton" destination="aOY-yt-gpM" id="m9H-On-0gu"/>
+                        <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="QR1-4M-2hC"/>
+                        <outlet property="rentalLabel" destination="Qqf-vy-Mid" id="AWd-lu-xou"/>
+                        <outlet property="searchButton" destination="szD-od-WaM" id="RWZ-jq-0KK"/>
+                        <outlet property="walkabilityLabel" destination="CZF-Jl-7B7" id="1q2-uA-0Cq"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brq-Nu-Gi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476.8115942028987" y="-422.54464285714283"/>
         </scene>
@@ -330,5 +347,3 @@
         </systemColor>
     </resources>
 </document>
-
-
