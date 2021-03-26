@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		11BA618C260D763E00BD17BC /* MapDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BA618B260D763E00BD17BC /* MapDashboard.storyboard */; };
-		11BA6190260D765700BD17BC /* MapDashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */; };
+		11BA6190260D765700BD17BC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA618F260D765700BD17BC /* DashboardViewController.swift */; };
+		11BA6194260D7F4C00BD17BC /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */; };
+		11BA619C260E08F600BD17BC /* DashboardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA619B260E08F600BD17BC /* DashboardCollectionView.swift */; };
 		463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AD24424CF2CDB00447BB8 /* AddProfileViewController.swift */; };
 		466C4274249A8748007D033E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C4273249A8748007D033E /* AppDelegate.swift */; };
 		466C4276249A8748007D033E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C4275249A8748007D033E /* SceneDelegate.swift */; };
@@ -55,7 +57,9 @@
 
 /* Begin PBXFileReference section */
 		11BA618B260D763E00BD17BC /* MapDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDashboard.storyboard; sourceTree = "<group>"; };
-		11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDashboardTabBarController.swift; sourceTree = "<group>"; };
+		11BA618F260D765700BD17BC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		11BA619B260E08F600BD17BC /* DashboardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionView.swift; sourceTree = "<group>"; };
 		463AD24424CF2CDB00447BB8 /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
 		466C4270249A8748007D033E /* labs-ios-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "labs-ios-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		466C4273249A8748007D033E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,7 +222,9 @@
 				C3BEDE8C25C2728D006BF31A /* MapScreen.storyboard */,
 				C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */,
 				11BA618B260D763E00BD17BC /* MapDashboard.storyboard */,
-				11BA618F260D765700BD17BC /* MapDashboardTabBarController.swift */,
+				11BA618F260D765700BD17BC /* DashboardViewController.swift */,
+				11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */,
+				11BA619B260E08F600BD17BC /* DashboardCollectionView.swift */,
 			);
 			path = "Map Screen";
 			sourceTree = "<group>";
@@ -359,6 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BEDE9325C2731D006BF31A /* SearchViewController.swift in Sources */,
+				11BA619C260E08F600BD17BC /* DashboardCollectionView.swift in Sources */,
+				11BA6194260D7F4C00BD17BC /* DashboardCollectionViewCell.swift in Sources */,
 				46BEB4EE24C98ECC00FE0CD1 /* ProfileController.swift in Sources */,
 				C34804EB25D4E9C3007CEA5A /* Map.swift in Sources */,
 				C34804EE25D4F640007CEA5A /* Alert.swift in Sources */,
@@ -368,7 +376,7 @@
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
 				F35C107F25C791E0000AA795 /* CardView.swift in Sources */,
-				11BA6190260D765700BD17BC /* MapDashboardTabBarController.swift in Sources */,
+				11BA6190260D765700BD17BC /* DashboardViewController.swift in Sources */,
 				C37D6E3625D07F150025842E /* FavoritesCollectionViewCell.swift in Sources */,
 				C31B35AE25DB7E3000F5436E /* NetworkModels.swift in Sources */,
 				C33AB38025D1137200DAD194 /* MapScreenViewController.swift in Sources */,
