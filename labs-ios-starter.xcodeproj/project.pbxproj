@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1103DD47260FCDD30082BA03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103DD46260FCDD30082BA03 /* MapViewController.swift */; };
 		11BA618C260D763E00BD17BC /* MapDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BA618B260D763E00BD17BC /* MapDashboard.storyboard */; };
 		11BA6190260D765700BD17BC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA618F260D765700BD17BC /* DashboardViewController.swift */; };
 		11BA6194260D7F4C00BD17BC /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1103DD46260FCDD30082BA03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		11BA618B260D763E00BD17BC /* MapDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDashboard.storyboard; sourceTree = "<group>"; };
 		11BA618F260D765700BD17BC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -223,8 +225,9 @@
 				C33AB37F25D1137200DAD194 /* MapScreenViewController.swift */,
 				11BA618B260D763E00BD17BC /* MapDashboard.storyboard */,
 				11BA618F260D765700BD17BC /* DashboardViewController.swift */,
-				11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */,
 				11BA619B260E08F600BD17BC /* DashboardCollectionView.swift */,
+				11BA6193260D7F4C00BD17BC /* DashboardCollectionViewCell.swift */,
+				1103DD46260FCDD30082BA03 /* MapViewController.swift */,
 			);
 			path = "Map Screen";
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				C34804EB25D4E9C3007CEA5A /* Map.swift in Sources */,
 				C34804EE25D4F640007CEA5A /* Alert.swift in Sources */,
 				46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */,
+				1103DD47260FCDD30082BA03 /* MapViewController.swift in Sources */,
 				C31B35AB25DB7BB300F5436E /* NetworkClient.swift in Sources */,
 				46BEB4E724C98D8900FE0CD1 /* Notifications.swift in Sources */,
 				46BEB4E124C9828800FE0CD1 /* Profile.swift in Sources */,

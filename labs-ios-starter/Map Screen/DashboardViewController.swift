@@ -38,13 +38,8 @@ class DashboardViewController: UIViewController {
     @IBAction func searchButtonPressed(_ sender: Any) {
         dismiss(animated: true)
     }
-//    @IBAction func favoriteButtonPressed(_ sender: Any) {
-//        favoriteButton.currentImage == UIImage(named: "FavoriteButton") ? favoriteButton.setImage(UIImage(named: "UncheckedHeart"), for: .normal) : favoriteButton.setImage(UIImage(named: "FavoriteButton"), for: .normal)
-//    }
-    
     
     // MARK: - Methods
     func updateViews() {
-        
     }
 }

@@ -20,5 +20,7 @@ struct Walkability: Decodable {
 }
 
 /// TODO: other decodable data to use
-
+struct Employment: Decodable {
+    let employment: Int
+}
 
