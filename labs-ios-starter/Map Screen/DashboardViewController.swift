@@ -26,7 +26,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var cityNameLabel: UILabel!
     
     // MARK: - Properties
-
+    var city: City?
+    var favoriteCities: [Favorite]?
 
 
     override func viewDidLoad() {
@@ -41,5 +42,11 @@ class DashboardViewController: UIViewController {
     
     // MARK: - Methods
     func updateViews() {
+        livabilityLabel.text = city.livability
+        walkabilityLabel.text = city.walkability
+        rentalLabel.text = city.rentalPrice
+        cityNameLabel.text = city.city
     }
+    
+    
 }
