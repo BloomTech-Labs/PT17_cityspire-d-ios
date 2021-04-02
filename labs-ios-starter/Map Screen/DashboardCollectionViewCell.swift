@@ -9,6 +9,16 @@
 import UIKit
 
 class DashboardCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var cityNameLabel: UILabel!
     
+    var city = City? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    func updateViews() {
+        cityNameLabel.text = city.city
+    }
     
 }

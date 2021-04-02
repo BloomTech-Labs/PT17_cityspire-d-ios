@@ -5,15 +5,10 @@
 //  Created by AAron on 3/25/21.
 //  Copyright © 2021 Spencer Curtis. All rights reserved.
 //
-import CoreData
-import MapKit
 import UIKit
 
 /// Class controls MapView and Dashboard. User is able to view Favorite Cities in Dashboard
 class DashboardViewController: UIViewController {
-    
-    // Context for CoreData
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - IBOutlets
     @IBOutlet weak var employmentLabel: UILabel!
@@ -24,6 +19,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var averageIncomeLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
     var city: City?
@@ -47,6 +43,4 @@ class DashboardViewController: UIViewController {
         rentalLabel.text = city.rentalPrice
         cityNameLabel.text = city.city
     }
-    
-    
 }

@@ -14,7 +14,12 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = 
+        guard let cell = collectionView.dequeueReusableCell(withIdentifier: "CityCell") else { return UICollectionViewCell() }
+        
+        cityInstance = city[indexPath.row]
+        cell.city = cityInstance
+        
+        return cell
     }
     
     

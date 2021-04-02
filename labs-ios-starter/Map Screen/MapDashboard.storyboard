@@ -297,7 +297,8 @@
                     <connections>
                         <outlet property="averageAgeLabel" destination="ihY-EL-lXB" id="1r5-q9-Ht7"/>
                         <outlet property="averageIncomeLabel" destination="Rqj-rJ-2vT" id="4HL-Cd-K3e"/>
-                        <outlet property="cityNameLabel" destination="Jl8-2k-XvH" id="Tgl-Jg-ZC1"/>
+                        <outlet property="cityNameLabel" destination="8Xv-So-tZZ" id="0DR-ho-r7q"/>
+                        <outlet property="collectionView" destination="SMv-sE-Dmn" id="N9I-Bh-En7"/>
                         <outlet property="employmentLabel" destination="Z3I-O0-Jve" id="8QN-JN-WNb"/>
                         <outlet property="livabilityLabel" destination="Hc0-HK-WB6" id="QR1-4M-2hC"/>
                         <outlet property="rentalLabel" destination="Qqf-vy-Mid" id="AWd-lu-xou"/>
