@@ -12,7 +12,8 @@ import MapKit
 extension MKMapView {
     func centerToLocation(
         _ location: CLLocation,
-        regionRadius: CLLocationDistance = 1000
+        regionRadius: CLLocationDistance = 1000,
+        city: String
     ) {
         let coordinateRegion = MKCoordinateRegion (
             center: location.coordinate,
@@ -21,7 +22,7 @@ extension MKMapView {
         setRegion(coordinateRegion, animated: true)
         let pin = MKPointAnnotation()
         pin.coordinate = location.coordinate
-        pin.title = "Where contact was recorded"
+        pin.title = city
         addAnnotation(pin)
     }
 }

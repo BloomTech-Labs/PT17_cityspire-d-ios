@@ -25,6 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mq-cH-iXc">
                                 <rect key="frame" x="25" y="94" width="40" height="38"/>
                                 <state key="normal" image="searchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="QP7-cp-B9W" eventType="touchUpInside" id="YIz-fa-ODd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jWQ-E9-LfG"/>
@@ -44,6 +47,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" landscapeImage="map" id="Wy6-uf-fBl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKS-xy-ZaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="QP7-cp-B9W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1477" y="224"/>
         </scene>
